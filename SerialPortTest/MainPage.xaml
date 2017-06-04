@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="SerialPortTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SerialPortTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="82.082">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-52,-139">
+        <ComboBox x:Name="SerialPortNameCB" RenderTransformOrigin="1.941,1.85" 
+                  ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" Margin="88,16,0,0" Width="294" DropDownOpened="SerialPortNameCB_DropDownOpened" DropDownClosed="SerialPortNameCB_DropDownClosed"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,16,0,0" TextWrapping="Wrap" Text="Serial Port" VerticalAlignment="Top" RenderTransformOrigin="0.74,-1.436"/>
+        <TextBlock x:Name="SelectedPortName"  HorizontalAlignment="Left" Margin="395,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+                   Text="{Binding ElementName=SerialPortNameCB, Path=SelectedItem.Id, Mode=OneWay}" RenderTransformOrigin="3.894,-0.142" Visibility="Collapsed"/>
+        <TextBox x:Name="SelectedPortProperty" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="153" Width="383"/>
+    </Grid>
+</Page>
