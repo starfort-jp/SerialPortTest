@@ -29,6 +29,7 @@ namespace SerialPortTest
         private PropertySerialDevice xPropertySerialDevice;
         private List<string> stringListPort;
         private bool xConnected;
+        private WinSerialPort xSerialPort = null;
 
         public void Connect_SerialDevice()
         {
@@ -100,11 +101,11 @@ namespace SerialPortTest
             comboBox2.Items.Add("9600");
             comboBox2.Items.Add("14400");
             comboBox2.Items.Add("19200");
-            comboBox2.Items.Add("28800");
             comboBox2.Items.Add("38400");
             comboBox2.Items.Add("57600");
             comboBox2.Items.Add("115200");
             comboBox2.Items.Add("128000");
+            comboBox2.Items.Add("256000");
             comboBox2.SelectedIndex = 2;
             xPropertySerialDevice.BaudRate = 9600;
             //ComboBox DataBit
@@ -145,6 +146,10 @@ namespace SerialPortTest
             {
                 xSerialDevice.Close();
             }
+            if (xSerialPort != null)
+            {
+                xSerialPort.Close();
+            }        
         }
    
         private void comboBox1_DropDown(object sender, EventArgs e)
@@ -220,19 +225,19 @@ namespace SerialPortTest
                     xPropertySerialDevice.BaudRate = 19200;
                     break;
                 case 5:
-                    xPropertySerialDevice.BaudRate = 28800;
-                    break;
-                case 6:
                     xPropertySerialDevice.BaudRate = 38400;
                     break;
-                case 7:
+                case 6:
                     xPropertySerialDevice.BaudRate = 57600;
                     break;
-                case 8:
+                case 7:
                     xPropertySerialDevice.BaudRate = 115200;
                     break;
-                case 9:
+                case 8:
                     xPropertySerialDevice.BaudRate = 128000;
+                    break;
+                case 9:
+                    xPropertySerialDevice.BaudRate = 256000;
                     break;
             }
         }
@@ -330,6 +335,15 @@ namespace SerialPortTest
         private void button3_Click_1(object sender, EventArgs e)
         {
             richTextBox2.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            xSerialPort = new WinSerialPort("COM3", 9600, Parity.None, 8, StopBits.None);
+            if ( xSerialPort.Open() == false)
+            {
+                MessageBox.Show("ポートのオープンに失敗しました。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

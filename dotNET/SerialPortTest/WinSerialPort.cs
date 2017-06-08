@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices; // DLL Import
 using System.Collections.Specialized; // BitVector32
 using System.IO.Ports; // SerialPort Object
+using System.Windows.Forms;
 
 namespace SerialPortTest
 {
@@ -30,7 +31,7 @@ namespace SerialPortTest
         [DllImport("kernel32.dll")]
         static extern bool GetCommState(IntPtr hFile, ref DCB lpDCB);
 
-        [DllImport("kernel32.dll")]
+        [DllImport("kernel32.dll", SetLastError = true)]
         static extern bool SetCommState(IntPtr hFile, ref DCB lpDCB);
 
         [DllImport("kernel32.dll", SetLastError = true)]
@@ -333,18 +334,25 @@ namespace SerialPortTest
 
             //Setting Communication
             var dcb = new DCB();
+            dcb.DCBLength = (uint)Marshal.SizeOf(dcb);
             if (!GetCommState(port, ref dcb))
                 return false;
-            dcb.RtsControl = RtsControl.Enable;
-            dcb.DtrControl = DtrControl.Enable;
-            dcb.BaudRate = 250 * 1000;
-            dcb.ByteSize = 8;
+            dcb.BaudRate = baudRate;
+            dcb.ByteSize = dataBits;
             dcb.Parity = parity;
             dcb.StopBits = stopBits;
-            dcb.Binary = true;
-            dcb.CheckParity = true;
+            //            dcb.XonChar = 0x11;
+            //            dcb.XoffChar = 0x13;
+            //            dcb.Binary = true;
+            //            dcb.CheckParity = true;
+            //            dcb.RtsControl = RtsControl.Disable;
+            //            dcb.DtrControl = DtrControl.Disable;
             if (!SetCommState(port, ref dcb))
+            {
+                int errCode = Marshal.GetLastWin32Error();
+                MessageBox.Show("SetCommStateに失敗しました。" + errCode.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
 
             //Setting Timeout
             var Commtimeouts = new COMMTIMEOUTS();

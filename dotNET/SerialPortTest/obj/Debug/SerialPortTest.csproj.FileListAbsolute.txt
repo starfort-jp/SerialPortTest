@@ -6,4 +6,3 @@ C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\Se
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.csproj.GenerateResource.Cache
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.exe
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.pdb
-C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.csprojResolveAssemblyReference.cache
