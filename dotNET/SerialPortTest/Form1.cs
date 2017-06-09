@@ -29,12 +29,13 @@ namespace SerialPortTest
         private PropertySerialDevice xPropertySerialDevice;
         private List<string> stringListPort;
         private bool xConnected;
-        private WinSerialPort xSerialPort = null;
 
         public void Connect_SerialDevice()
         {
-            xSerialDevice.BaudRate = xPropertySerialDevice.BaudRate;
-            xSerialDevice.DataBits = xPropertySerialDevice.DataBits;
+//            xSerialDevice.BaudRate = xPropertySerialDevice.BaudRate;
+//            xSerialDevice.DataBits = xPropertySerialDevice.DataBits;
+            xSerialDevice.BaudRate = (uint)xPropertySerialDevice.BaudRate;
+            xSerialDevice.DataBits = (byte)xPropertySerialDevice.DataBits;
             xSerialDevice.Parity = xPropertySerialDevice.Parity;
             xSerialDevice.StopBits = xPropertySerialDevice.StopBits;
             xSerialDevice.Handshake = xPropertySerialDevice.Handshake;
@@ -146,10 +147,6 @@ namespace SerialPortTest
             {
                 xSerialDevice.Close();
             }
-            if (xSerialPort != null)
-            {
-                xSerialPort.Close();
-            }        
         }
    
         private void comboBox1_DropDown(object sender, EventArgs e)
@@ -186,23 +183,6 @@ namespace SerialPortTest
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
             xSerialDevice.PortName = stringListPort[comboBox1.SelectedIndex];
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (xConnected == false)
-            {
-                Connect_SerialDevice();
-            }
-            else
-            {
-                Disconnect_SerialDevice();
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Put_TransmittingText();
         }
 
         private void comboBox2_DropDownClosed(object sender, EventArgs e)
@@ -327,22 +307,37 @@ namespace SerialPortTest
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (xConnected == false)
+            {
+                Connect_SerialDevice();
+            }
+            else
+            {
+                Disconnect_SerialDevice();
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Put_TransmittingText();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             richTextBox2.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            xSerialPort = new WinSerialPort("COM3", 9600, Parity.None, 8, StopBits.None);
-            if ( xSerialPort.Open() == false)
+            byte[] buffer = new byte[1];
+            int RxData = xSerialDevice.ByteRead();
+            if (RxData != -1)
             {
-                MessageBox.Show("ポートのオープンに失敗しました。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                buffer[0] = (byte)RxData;
+                string RxText = System.Text.Encoding.ASCII.GetString(buffer);
+                richTextBox2.AppendText(RxText);
             }
         }
     }

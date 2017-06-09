@@ -308,12 +308,13 @@ namespace SerialPortTest
         #endregion
 
         IntPtr port { get; set; }
-        string portName { get; }
-        uint baudRate { get; }
-        Parity parity { get; }
-        byte dataBits { get; }
-        StopBits stopBits { get; }
-        byte[] recvBuffer { get; } = new byte[1];
+        public string portName { get; set; }
+        public uint baudRate { get; set; }
+        public Parity parity { get; set; }
+        public byte dataBits { get; set; }
+        public StopBits stopBits { get; set; }
+        public byte[] recvBuffer { get; } = new byte[1];
+        public bool IsOpen { get; set; }
 
         public WinSerialPort(string portName, uint baudRate, Parity parity, byte dataBits, StopBits stopBits)
         {
@@ -322,6 +323,7 @@ namespace SerialPortTest
             this.parity = parity;
             this.dataBits = dataBits;
             this.stopBits = stopBits;
+            this.IsOpen = false;
         }
 
         public bool Open()
@@ -341,19 +343,23 @@ namespace SerialPortTest
             dcb.ByteSize = dataBits;
             dcb.Parity = parity;
             dcb.StopBits = stopBits;
-            //            dcb.XonChar = 0x11;
-            //            dcb.XoffChar = 0x13;
-            //            dcb.Binary = true;
-            //            dcb.CheckParity = true;
-            //            dcb.RtsControl = RtsControl.Disable;
-            //            dcb.DtrControl = DtrControl.Disable;
+            dcb.XonChar = 0x11;
+            dcb.XoffChar = 0x13;
+            dcb.Binary = true;
+            dcb.CheckParity = true;
+            dcb.RtsControl = RtsControl.Disable;
+            dcb.DtrControl = DtrControl.Disable;
+            SetCommState(port, ref dcb);
+/*
             if (!SetCommState(port, ref dcb))
             {
                 int errCode = Marshal.GetLastWin32Error();
                 MessageBox.Show("SetCommStateに失敗しました。" + errCode.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
+            //On Windows10, SetCommState returns -1, GetLastError = 87
+*/       
+            
             //Setting Timeout
             var Commtimeouts = new COMMTIMEOUTS();
             if (!GetCommTimeouts(port, ref Commtimeouts))
@@ -363,7 +369,7 @@ namespace SerialPortTest
 
             if (!SetCommTimeouts(port, ref Commtimeouts))
                 return false;
-
+            this.IsOpen = true;
             return true;
         }
 
@@ -371,22 +377,23 @@ namespace SerialPortTest
         {
             CloseHandle(port);
             port = IntPtr.Zero;
+            this.IsOpen = false;
         }
 
-        public void Write(byte[] buffer, uint offset, uint size)
+        public void Write(byte[] buffer, int offset, int size)
         {
             uint writen = 0;
             WriteFile(port, buffer, (uint)size, out writen, 0);
         }
 
-        public int ReadByte()
+        public int ReadByte()   //return read byte, RxData -> recvBuffer
         {
             uint recved = 0;
             if (ReadFile(port, recvBuffer, 1, out recved, 0))
             {
                 if (0 < recved)
                 {
-                    return recvBuffer[0];
+                    return (int)recved;
                 }
             }
             return -1;

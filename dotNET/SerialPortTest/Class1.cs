@@ -15,13 +15,14 @@ namespace SerialPortTest
     /// </summary>
     class SerialPortProcessor
     {
-        private SerialPort xSerialPort = null;
+//        private SerialPort xSerialPort = null;
+        private WinSerialPort xSerialPort = null;
         private Thread receiveThread = null;
 
         public String PortName { get; set; }
-        public int BaudRate { get; set; }
+        public uint BaudRate { get; set; }
         public Parity Parity { get; set; }
-        public int DataBits { get; set; }
+        public byte DataBits { get; set; }
         public StopBits StopBits { get; set; }
         public Handshake Handshake { get; set; }
 
@@ -37,11 +38,12 @@ namespace SerialPortTest
             }
             if (xSerialPort == null)
             {
-                xSerialPort = new SerialPort(PortName, BaudRate, Parity, DataBits, StopBits);
+//                xSerialPort = new SerialPort(PortName, BaudRate, Parity, DataBits, StopBits);
+                xSerialPort = new WinSerialPort(PortName, BaudRate, Parity, DataBits, StopBits);
             }
             try
             {
-                /*
+                /*  //typical settings
                 xSerialPort.BaudRate = 9600;
                 xSerialPort.DataBits = 8;
                 xSerialPort.DiscardNull = false;
@@ -60,7 +62,7 @@ namespace SerialPortTest
                 xSerialPort.WriteBufferSize = 2048;
                 xSerialPort.WriteTimeout = -1;
                 */
-                xSerialPort.PortName = PortName;
+                xSerialPort.portName = PortName;
                 xSerialPort.Open();
                 receiveThread = new Thread(SerialPortProcessor.ReceiveWork);
                 receiveThread.Start(this);
@@ -87,7 +89,7 @@ namespace SerialPortTest
             }
             catch (IOException ex)
             {
-                MessageBox.Show("ポートへの書込み中、I/O 例外が発生しました。",  "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ポートへの書込み中、I/O 例外が発生しました。" + ex.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -104,6 +106,7 @@ namespace SerialPortTest
             {
                 try
                 {
+/*
                     int rbyte = xSerialPort.BytesToRead;
                     byte[] buffer = new byte[rbyte];
                     int read = 0;
@@ -116,23 +119,64 @@ namespace SerialPortTest
                     {
                         DataReceived(buffer);
                     }
+*/
+
+//                    int xReadByte = xSerialPort.ReadByte();
+                    int xReadByte = 0;  //nothing to do, not implemented thread read
+                    if (xReadByte > 0)
+                    {
+                        byte[] buffer = new byte[1];
+                        buffer[0] = xSerialPort.recvBuffer[0];
+                        DataReceived(buffer);
+                    }
                 }
                 catch (IOException ex)
                 {
-                    MessageBox.Show("ポートからの読み込み中、I/O 例外が発生しました。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ポートからの読み込み中、I/O 例外が発生しました。" + ex.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (InvalidOperationException ex)
                 {
-                    MessageBox.Show("ポートからの読み込み中、不正処理例外が発生しました。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ポートからの読み込み中、不正処理例外が発生しました。" + ex.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } while (xSerialPort.IsOpen);
+        }
+
+        public int ByteRead()
+        {
+            if (xSerialPort == null)
+            {
+                return (-1);
+            }
+            try
+            {
+                int xReadByte = xSerialPort.ReadByte();
+                if (xReadByte > 0)
+                {
+                    int RxData = (int)xSerialPort.recvBuffer[0];
+                    return (RxData);
+                }
+                return (-1);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("ポートからの読み込み中、I/O 例外が発生しました。" + ex.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return (-1);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("ポートからの読み込み中、不正処理例外が発生しました。" + ex.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return (-1);
+            }
         }
 
         public void Close()
         {
             if (receiveThread != null && xSerialPort != null)
             {
-                xSerialPort.Close();
+//                xSerialPort.Close();
+//                xSerialPort.DiscardInBuffer();
+//                xSerialPort.DiscardOutBuffer();
+                xSerialPort.Dispose();
                 receiveThread.Join();
             }
         }
