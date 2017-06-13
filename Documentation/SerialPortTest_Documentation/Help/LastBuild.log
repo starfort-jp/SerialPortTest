@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\SerialPortTest_Documentation.shfbproj" started="2017/06/13 17:32:05">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
+Locating components in the following folder(s):
+    C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation
+    C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
+    C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+Using framework reflection data for &#39;.NET Framework 4.5&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
+Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
+Loading and initializing plug-ins...
+Lightweight Website Style Version 2017.5.15.0
+Copyright &#169; 2006-2017, Eric Woodruff, All Rights Reserved
+Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe
+    Found assembly &#39;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe&#39;
+Source: C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.xml
+Source: C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll
+    Found assembly &#39;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll&#39;
+
+Copying XML comments files
+    C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.xml -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\SerialPortTest.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, 英語 (米国))...
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+</plugIn>    Last step completed in 00:00:00.0030
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
+2017/06/13 17:32:05 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット)。
+PrepareForBuild:
+  ディレクトリ &quot;obj\Debug\&quot; を作成しています。
+GenerateRefInfo:
+  MRefBuilder (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  No source code context base path specified.  Source context information is unavailable.
+  Loaded 2 assemblies for reflection and 1 dependency assemblies.
+  Wrote information on 1 namespaces, 10 types, and 76 members
+  &quot;reflection.org&quot; から &quot;reflection.all&quot; へファイルをコピーしています。
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
+プロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:00.43
+    Last step completed in 00:00:00.5423
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
+2017/06/13 17:32:06 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット)。
+TransformManifest:
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  &quot;reflection.xml&quot; から &quot;reflection.ungrouped&quot; へファイルをコピーしています。
+  AddNamespaceGroups (v2017.5.15.0)
+  Copyright c 2006-2017, Eric Woodruff, All Rights Reserved
+  Added 0 namespace group entries
+  &quot;reflection.xml&quot; から &quot;reflection.nofilenames&quot; へファイルをコピーしています。
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddFilenames.xsl&#39;.
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+プロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:00.38
+    Last step completed in 00:00:00.4765
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0139
+</buildStep>
+<buildStep step="CopyConceptualContent">
+Copying conceptual content...
+Copying standard token shared content file...
+Checking for other token files...
+Checking for code snippets files...
+Copying images and creating the media map file...
+Generating conceptual topic files
+    Parsing topic file &#39;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Content\Welcome.aml&#39;
+    C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Content\Welcome.aml -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\ddueXml\63ce297a-fa3e-4785-8aa6-676a056991cb.xml
+    Parsing topic file &#39;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Content\VersionHistory\VersionHistory.aml&#39;
+    C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\ddueXml\a18a5f30-058d-462a-be6b-2db5df893163.xml
+    Parsing topic file &#39;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Content\VersionHistory\v1.0.0.0.aml&#39;
+    C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\ddueXml\d467829c-7425-43bc-ad59-b911ee7ce2c1.xml
+    Last step completed in 00:00:00.0284
+</buildStep>
+<buildStep step="CreateConceptualTopicConfigs">
+Creating conceptual topic configuration files...
+    Companion files
+    _ContentMetadata_.xml
+    Merging topic IDs into manifest.xml
+    Last step completed in 00:00:00.0220
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\icons\Help.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\Help.png
+    Last step completed in 00:00:00.0050
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0005
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
+2017/06/13 17:32:06 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット)。
+GenerateIntermediateTOC:
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
+プロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:00.07
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00.1626
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00.0739
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\sandcastle.config
+  Updating reference topic configurations.
+  Updating conceptual topic configurations.
+    Removing unused ExampleComponent.
+    Last step completed in 00:00:00.0140
+</buildStep>
+<buildStep step="BuildTopics">
+Building help topics...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
+2017/06/13 17:32:07 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット)。
+BuildTopics:
+  BuildAssembler (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Loading configuration...
+  Processing topics...
+BuildAssembler : warning : ShowMissingComponent: [N:SerialPortTest] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;P:System.ComponentModel.Component.CanRaiseEventsInternal&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;P:System.Windows.Forms.Control.RenderTransparent&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.__RaceSetServerIdentity(System.Runtime.Remoting.ServerIdentity)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.__ResetServerIdentity&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.CanCastToXmlType(System.String,System.String)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.GetComIUnknown(System.Boolean)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.IsInstanceOfType(System.Type)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.__RaceSetServerIdentity(System.Runtime.Remoting.ServerIdentity)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.__ResetServerIdentity&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.CanCastToXmlType(System.String,System.String)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.GetComIUnknown(System.Boolean)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:SerialPortTest.Form1] MSDN URL not found for target &#39;M:System.MarshalByRefObject.IsInstanceOfType(System.Type)&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Properties.T:SerialPortTest.Form1] MSDN URL not found for target &#39;P:System.ComponentModel.Component.CanRaiseEventsInternal&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Properties.T:SerialPortTest.Form1] MSDN URL not found for target &#39;P:System.Windows.Forms.Control.RenderTransparent&#39;. [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:SerialPortTest.Program] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.PropertySerialDevice.BaudRate] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.PropertySerialDevice.DataBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.PropertySerialDevice.Handshake] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.PropertySerialDevice.Parity] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.PropertySerialDevice.PortName] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.PropertySerialDevice.StopBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.SerialPortProcessor.BaudRate] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.SerialPortProcessor.DataBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.SerialPortProcessor.Handshake] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.SerialPortProcessor.Parity] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.SerialPortProcessor.PortName] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.SerialPortProcessor.StopBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.baudRate] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:SerialPortTest.WinSerialPort.CloseHandle(System.IntPtr)] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:SerialPortTest.WinSerialPort.CloseHandle(System.IntPtr)] Missing &lt;returns&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:SerialPortTest.WinSerialPort.CloseHandle(System.IntPtr)] Missing &lt;param name=&quot;hObject&quot;/&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.dataBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.IsOpen] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:SerialPortTest.WinSerialPort.Open] Missing &lt;returns&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.parity] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.PortName] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:SerialPortTest.WinSerialPort.ReadByte] Missing &lt;returns&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.recvBuffer] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.stopBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:SerialPortTest.WinSerialPort.DCB] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.AbortOnError] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.BaudRate] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.Binary] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.ByteSize] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.CheckParity] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.DCBLength] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.DsrSensitivity] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.DtrControl] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.EofChar] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.ErrorChar] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.EvtChar] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.InX] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.Null] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.OutX] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.OutxCtsFlow] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.OutxDsrFlow] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.Parity] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.ReplaceErrorChar] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.RtsControl] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.StopBits] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:SerialPortTest.WinSerialPort.DCB.TxContinueOnXoff] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.XoffChar] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.XoffLim] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.XonChar] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:SerialPortTest.WinSerialPort.DCB.XonLim] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:SerialPortTest.WinSerialPort.DtrControl] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:SerialPortTest.WinSerialPort.Purge] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:SerialPortTest.WinSerialPort.RtsControl] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [G:] Missing &lt;summary&gt; documentation [C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj]
+  Processed 93 topic(s)
+  72 warning(s)
+  CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
+  ResolveArtLinksComponent: Copying media files...
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 3 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
+  SaveComponent: Waiting for the document writer task to finish (36 Help1 API file(s) remaining)...
+プロジェクト &quot;C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:03.04
+    Last step completed in 00:00:03.1455
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0045
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - ExtractHtmlInfo.proj]
+Sandcastle Help File Builder and Tools, version 2017.5.15.0
+Copyright c 2006-2017, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing Help 1 files in C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1
+Processed 93 HTML files
+Sorting keywords and generating See Also indices
+Saving HTML Help 1 keyword index to C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\SerialPortTest_Documentation.hhk
+Saving HTML Help 1 table of contents to C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\SerialPortTest_Documentation.hhc
+    Last step completed in 00:00:00.2736
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\styles\branding.css
+    Last step completed in 00:00:00.2730
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating HTML Help 1 table of contents file...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateHelpFileIndex">
+Generating HTML Help 1 index file...
+    Last step completed in 00:00:00.0005
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Generating HTML Help 1 project file...
+    Last step completed in 00:00:00.0030
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Compiling HTML Help 1 file...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - Build1xHelpFile.proj]
+  Microsoft HTML Help Compiler 4.74.8702
+  
+  
+  
+  Compiling c:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\SerialPortTest_Documentation.chm
+  
+  
+  
+  
+  
+  Compile time: 0 minutes, 2 seconds
+  
+  95	Topics
+  
+  954	Local links
+  
+  1,372	Internet links
+  
+  0	Graphics
+  
+  
+  
+  
+  
+  Created c:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_Documentation\SerialPortTest_Documentation\Help\Working\Output\HtmlHelp1\SerialPortTest_Documentation.chm, 147,147 bytes
+  
+  Compression decreased file by 859,040 bytes.
+  
+    Last step completed in 00:00:02.8023
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.0589
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 2017/06/13 17:32:13.  Total time: 00:00:08.2541
+
+</buildStep>
+</shfbBuild>

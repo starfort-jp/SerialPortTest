@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace SerialPortTest
 {
+    /// <summary>
+    /// Serial Port class of Win32 API
+    /// </summary>
+    /// <seealso cref="System.IDisposable" />
     class WinSerialPort : IDisposable
     {
         #region Win32 API 
@@ -308,7 +312,7 @@ namespace SerialPortTest
         #endregion
 
         IntPtr port { get; set; }
-        public string portName { get; set; }
+        public string PortName { get; set; }
         public uint baudRate { get; set; }
         public Parity parity { get; set; }
         public byte dataBits { get; set; }
@@ -316,9 +320,17 @@ namespace SerialPortTest
         public byte[] recvBuffer { get; } = new byte[1];
         public bool IsOpen { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WinSerialPort"/> class.
+        /// </summary>
+        /// <param name="portName">Name of the port.</param>
+        /// <param name="baudRate">The baud rate.</param>
+        /// <param name="parity">The parity.</param>
+        /// <param name="dataBits">The data bits.</param>
+        /// <param name="stopBits">The stop bits.</param>
         public WinSerialPort(string portName, uint baudRate, Parity parity, byte dataBits, StopBits stopBits)
         {
-            this.portName = portName;
+            this.PortName = portName;
             this.baudRate = baudRate;
             this.parity = parity;
             this.dataBits = dataBits;
@@ -326,9 +338,13 @@ namespace SerialPortTest
             this.IsOpen = false;
         }
 
+        /// <summary>
+        /// Opens this instance.
+        /// </summary>
+        /// <returns></returns>
         public bool Open()
         {
-            port = CreateFile(portName, DesiredAccess.GENERIC_READ | DesiredAccess.GENERIC_WRITE, 0, 0, CreationDisposition.OPEN_EXISTING, FlagsAndAttributes.FILE_ATTRIBUTE_NORMAL, IntPtr.Zero);
+            port = CreateFile(PortName, DesiredAccess.GENERIC_READ | DesiredAccess.GENERIC_WRITE, 0, 0, CreationDisposition.OPEN_EXISTING, FlagsAndAttributes.FILE_ATTRIBUTE_NORMAL, IntPtr.Zero);
 
             //Open port
             if (0 >= port.ToInt32())
@@ -373,6 +389,9 @@ namespace SerialPortTest
             return true;
         }
 
+        /// <summary>
+        /// Closes this instance.
+        /// </summary>
         public void Close()
         {
             CloseHandle(port);
@@ -380,12 +399,22 @@ namespace SerialPortTest
             this.IsOpen = false;
         }
 
+        /// <summary>
+        /// Writes the specified buffer.
+        /// </summary>
+        /// <param name="buffer">The buffer.</param>
+        /// <param name="offset">The offset.</param>
+        /// <param name="size">The size.</param>
         public void Write(byte[] buffer, int offset, int size)
         {
             uint writen = 0;
             WriteFile(port, buffer, (uint)size, out writen, 0);
         }
 
+        /// <summary>
+        /// Reads the byte.
+        /// </summary>
+        /// <returns></returns>
         public int ReadByte()   //return read byte, RxData -> recvBuffer
         {
             uint recved = 0;
@@ -399,16 +428,25 @@ namespace SerialPortTest
             return -1;
         }
 
+        /// <summary>
+        /// Discards the in buffer.
+        /// </summary>
         public void DiscardInBuffer()
         {
             PurgeComm(port, Purge.RxClear);
         }
 
+        /// <summary>
+        /// Discards the out buffer.
+        /// </summary>
         public void DiscardOutBuffer()
         {
             PurgeComm(port, Purge.TxClear);
         }
 
+        /// <summary>
+        /// アンマネージ リソースの解放またはリセットに関連付けられているアプリケーション定義のタスクを実行します。
+        /// </summary>
         public void Dispose()
         {
             if (port != IntPtr.Zero)
