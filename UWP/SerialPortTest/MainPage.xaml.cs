@@ -21,112 +21,217 @@ using Windows.Devices.Enumeration;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
 
-
 // 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x411 を参照してください
 
 namespace SerialPortTest
 {
     /// <summary>
-    /// それ自体で使用できる空白ページまたはフレーム内に移動できる空白ページ。
+    /// Serial Port Property Record
     /// </summary>
-
     public struct VirtualSerialPortProperty
     {
         public string Id { get; set; }
         public string Name { get; set; }
     }
 
+    /// <summary>
+    /// Main Page class (Partial)
+    /// </summary>
+    /// <seealso cref="Windows.UI.Xaml.Controls.Page" />
+    /// <seealso cref="Windows.UI.Xaml.Markup.IComponentConnector" />
+    /// <seealso cref="Windows.UI.Xaml.Markup.IComponentConnector2" />
     public sealed partial class MainPage : Page
     {
         private ObservableCollection<VirtualSerialPortProperty> xPortList;
-        private VirtualSerialPortProperty xPortItem;
-        private List<string> xStringListID;
-        private List<string> xStringListName;
+        private VirtualSerialPortProperty[] xPortPropertyList;
+        private SerialDevice SelectedSerialDevice;
+        DataWriter dataWriteObject = null;
+        DataReader dataReaderObject = null;
 
-        public MainPage()
+
+
+        /// <summary>
+        /// Creates the user component.
+        /// </summary>
+        private void CreateUserComponent()
         {
-            this.InitializeComponent();
-
             this.xPortList = new ObservableCollection<VirtualSerialPortProperty>();
-            this.xPortItem = new VirtualSerialPortProperty();
-            this.xStringListID = new List<string>();
-            this.xStringListName = new List<string>();
+            this.xPortPropertyList = new VirtualSerialPortProperty[16];
+        }
+
+        /// <summary>
+        /// Initializes the user component.
+        /// </summary>
+        private void InitializeUserComponent()
+        {
             this.xPortList.Clear();
-            for (int xLP = 0; xLP <= 15; xLP++)
+            for (int xLP = 0; xLP < 16; xLP++)
             {
-                this.xStringListID.Add("");
-                this.xStringListName.Add("");
+                this.xPortPropertyList[xLP].Id = "";
+                this.xPortPropertyList[xLP].Name = "";
             }
         }
 
-        private async void SerialPortNameCB_DropDownOpened(object sender, object e)
+        /// <summary>
+        /// Gets the name of the serial port.
+        /// </summary>
+        private async void GetSerialPortName()
         {
             string selector;
-            int xCount;
 
-            this.xPortList.Clear();
-            for (int xLP = 0; xLP <= 15; xLP++)
+            this.RefreshSerialPortProperty.IsEnabled = false;
+            this.SerialPortNameCB.IsEnabled = false;
+            if (this.TxText.Text != "")
             {
-                this.xStringListID[xLP] = "";
-                this.xStringListName[xLP] = "";
-                this.xPortItem.Id = "";
-                this.xPortItem.Name = "";
-               selector = SerialDevice.GetDeviceSelector("COM" + xLP.ToString());
+                this.TxText.Text = "";
+            }
+            if (this.RxText.Text != "")
+            {
+                this.RxText.Text = "";
+            }
+            this.TxText.IsEnabled = false;
+            this.RxText.IsEnabled = false;
+            if (SelectedSerialDevice != null)
+            {
+                SelectedSerialDevice.Dispose();
+                SelectedSerialDevice = null;
+            }
+            this.InitializeUserComponent();
+            for (int xLP = 0; xLP < 16; xLP++)
+            {
+                selector = SerialDevice.GetDeviceSelector("COM" + xLP.ToString());
                 DeviceInformationCollection xDeviceCollection = await DeviceInformation.FindAllAsync(selector);
                 if (xDeviceCollection.Count > 0)
                 {
-                    this.xStringListID[xLP] = xDeviceCollection[0].Id;
-                    this.xStringListName[xLP] = xDeviceCollection[0].Name;
-                }
-            }
-            xCount = 0;
-            for (int xLP = 0; xLP <= 15; xLP++)
-            {
-                if (xStringListID[xLP] != "")
-                {
-                    this.xPortItem.Id = xStringListID[xLP];
-                    this.xPortItem.Name = xStringListName[xLP];
-                    this.xPortList.Add(this.xPortItem);
-                    xCount++;
+                    this.xPortPropertyList[xLP].Id = xDeviceCollection[0].Id;
+                    this.xPortPropertyList[xLP].Name = xDeviceCollection[0].Name;
+                    this.xPortList.Add(this.xPortPropertyList[xLP]);
                 }
             }
             SerialPortNameCB.DataContext = this.xPortList;
+            this.RefreshSerialPortProperty.IsEnabled = true;
+            this.SerialPortNameCB.IsEnabled = true;
         }
 
-        private async void SerialPortNameCB_DropDownClosed(object sender, object e)
+        /// <summary>
+        /// Writes the Text to serial port.
+        /// </summary>
+        /// <param name="TxText">The Tx text.</param>
+        /// <returns></returns>
+        private async Task WriteTextAsync(string TxTextString)
         {
-            string CurrentPortID;
-            string xID, xName, xPortName;
-            uint xBaudRate;
-            ushort xDataBit;
+            Task<UInt32> storeAsyncTask;
 
-            xID = "";
-            xName = "";
-            xPortName = "";
-            xBaudRate = 0;
-            xDataBit = 0;
-
-            CurrentPortID = SelectedPortName.Text.ToString();
-            SerialDevice SelectedSerialDevice = await SerialDevice.FromIdAsync(CurrentPortID);
-            if (SelectedSerialDevice != null)
+            if (TxTextString.Length != 0)
             {
-                xBaudRate = SelectedSerialDevice.BaudRate;
-                xDataBit = SelectedSerialDevice.DataBits;
-                xPortName = SelectedSerialDevice.PortName;
-                SelectedSerialDevice.Dispose();
-                SelectedSerialDevice = null;
+                // Load the text from the sendText input text box to the dataWriter object
+                dataWriteObject.WriteString(TxTextString);
 
+                // Launch an async task to complete the write operation
+                storeAsyncTask = dataWriteObject.StoreAsync().AsTask();
+
+                UInt32 bytesWritten = await storeAsyncTask;
+                if (bytesWritten > 0)
+                {
+                    status.Text = TxText + ", ";
+                    status.Text += "bytes written successfully!";
+                }
             }
             else
             {
-                xBaudRate = 0;
-                xDataBit = 0;
+                status.Text = "Enter the text you want to write and then click on 'WRITE'";
+            }
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainPage"/> class.
+        /// </summary>
+        public MainPage()
+        {
+            this.CreateUserComponent();
+            this.InitializeUserComponent();
+            this.InitializeComponent();
+            this.SerialPortNameCB.IsEnabled = false;
+            this.TxText.IsEnabled = false;
+            this.RxText.IsEnabled = false;
+        }
+
+        /// <summary>
+        /// Serials the port name combo box drop down closed.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The e.</param>
+        private async void SerialPortNameCB_DropDownClosed(object sender, object e)
+        {
+            string CurrentPortID;
+
+            if (SelectedSerialDevice != null)
+            {
+                SelectedSerialDevice.Dispose();
+                SelectedSerialDevice = null;
+                this.TxText.IsEnabled = false;
+                this.RxText.IsEnabled = false;
+            }
+            CurrentPortID = SelectedPortName.Text.ToString();
+            SelectedSerialDevice = await SerialDevice.FromIdAsync(CurrentPortID);
+            if (SelectedSerialDevice != null)
+            {
+//                await new MessageDialog("Success, created serial device.").ShowAsync();
+                this.TxText.IsEnabled = true;
+                this.RxText.IsEnabled = true;
+            }
+            else
+            {
                 await new MessageDialog("Oops, can't create serial device.").ShowAsync();
             }
-            SelectedPortProperty.Text = "ID: " + CurrentPortID  + "\r\n"
-                                      + "port name: " + xPortName.ToString() + "\r\n"
-                                      + "baud rate: " + xBaudRate.ToString() + "\r\n"
-                                      + "data bit: " + xDataBit.ToString();
+        }
+
+        /// <summary>
+        /// Handles the Click event of the refresh Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            GetSerialPortName();
+        }
+
+        /// <summary>
+        /// Handles the TextChanged event of the TxText control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="TextChangedEventArgs"/> instance containing the event data.</param>
+        private async void TxText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (this.TxText.Text.Length >= 1)
+            {
+                try
+                {
+                    if (SelectedSerialDevice != null)
+                    {
+                        string TxTextString = this.TxText.Text.Substring((this.TxText.Text.Length - 1), 1);
+                        dataWriteObject = new DataWriter(SelectedSerialDevice.OutputStream);    // Create the DataWriter object and attach to OutputStream
+                        await WriteTextAsync(TxTextString);   //Launch the WriteAsync task to perform the write
+                    }
+                    else
+                    {
+                        await new MessageDialog("Oops, can't find serial device.").ShowAsync();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await new MessageDialog("Oops, on trying to write to  serial device. " + ex.Message).ShowAsync();
+                }
+                finally
+                {
+                    if (dataWriteObject != null)
+                    {
+                        dataWriteObject.DetachStream();
+                        dataWriteObject = null;     // Cleanup once complete
+                    }
+                }
+
+            }
         }
     }
 }

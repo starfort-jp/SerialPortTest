@@ -22143,10 +22143,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hidemichi_Gotou\\Documents\\Visual Studio 2017\\Projects\\SerialPortTest\\SerialPortTest\\SerialPortTest.csproj",
+      "projectUniqueName": "C:\\Users\\Hidemichi_Gotou\\Documents\\Visual Studio 2017\\Projects\\SerialPortTest_UWP\\SerialPortTest\\SerialPortTest.csproj",
       "projectName": "SerialPortTest",
-      "projectPath": "C:\\Users\\Hidemichi_Gotou\\Documents\\Visual Studio 2017\\Projects\\SerialPortTest\\SerialPortTest\\SerialPortTest.csproj",
-      "projectJsonPath": "C:\\Users\\Hidemichi_Gotou\\Documents\\Visual Studio 2017\\Projects\\SerialPortTest\\SerialPortTest\\project.json",
+      "projectPath": "C:\\Users\\Hidemichi_Gotou\\Documents\\Visual Studio 2017\\Projects\\SerialPortTest_UWP\\SerialPortTest\\SerialPortTest.csproj",
+      "projectJsonPath": "C:\\Users\\Hidemichi_Gotou\\Documents\\Visual Studio 2017\\Projects\\SerialPortTest_UWP\\SerialPortTest\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
