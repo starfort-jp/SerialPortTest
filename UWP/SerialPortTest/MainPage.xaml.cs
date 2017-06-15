@@ -20,6 +20,7 @@ using Windows.Devices.SerialCommunication;
 using Windows.Devices.Enumeration;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
+using System.Text;
 
 // 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x411 を参照してください
 
@@ -139,8 +140,10 @@ namespace SerialPortTest
                  UInt32 bytesWritten = await storeAsyncTask;
                 if (bytesWritten > 0)
                 {
-                    status.Text = TxText + ", ";
-                    status.Text += "bytes written successfully!";
+                    Encoding xEnc = Encoding.GetEncoding("us-ascii");
+                    int xSize = xEnc.GetByteCount(TxTextString);
+                    status.Text = xSize.ToString();
+                    status.Text += " bytes written successfully!";
                 }
             }
             else
@@ -169,7 +172,7 @@ namespace SerialPortTest
                 if (bytesRead > 0)
                 {
                     RxText.Text += dataReaderObject.ReadString(bytesRead);
-                    status.Text = "bytes read successfully!";
+                    status.Text = bytesRead.ToString() + " bytes read successfully!";
                 }
             }
         }

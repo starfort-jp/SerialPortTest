@@ -789,6 +789,7 @@ C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UW
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Microsoft.Maker.Firmata.winmd
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Microsoft.Maker.RemoteWiring.winmd
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Microsoft.Maker.Serial.winmd
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\obj\x86\Debug\SerialPortTest.csprojResolveAssemblyReference.cache
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\obj\x86\Debug\App.g.i.cs
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\obj\x86\Debug\App.g.cs
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\obj\x86\Debug\MainPage.g.i.cs

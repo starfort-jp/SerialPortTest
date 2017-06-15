@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-15T12:26:41.870</Modified>
+      <Modified>2017-06-15T15:59:18.915</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\SerialPortTest.exe">
       <PackagePath>entrypoint\SerialPortTest.exe</PackagePath>
-      <Modified>2017-06-15T12:26:36.547</Modified>
+      <Modified>2017-06-15T15:59:18.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -559,7 +559,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\SerialPortTest.xr.xml">
       <PackagePath>SerialPortTest.xr.xml</PackagePath>
-      <Modified>2017-06-15T12:26:36.398</Modified>
+      <Modified>2017-06-15T13:22:36.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -568,11 +568,11 @@
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-15T12:26:38.473</Modified>
+      <Modified>2017-06-15T14:36:06.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Core\SerialPortTest.exe">
       <PackagePath>SerialPortTest.exe</PackagePath>
-      <Modified>2017-06-15T12:26:41.867</Modified>
+      <Modified>2017-06-15T15:59:18.906</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
