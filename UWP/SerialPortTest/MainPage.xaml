@@ -19,5 +19,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="254,62,0,0" TextWrapping="Wrap" Text="Read Text" VerticalAlignment="Top"/>
         <Button x:Name="RefreshSerialPortProperty" Content="Refresh" HorizontalAlignment="Left" Margin="81,11,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <TextBox x:Name="status" HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="483"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="195,55,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="439,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.554,-0.812" Click="Button_Click_2"/>
     </Grid>
 </Page>
