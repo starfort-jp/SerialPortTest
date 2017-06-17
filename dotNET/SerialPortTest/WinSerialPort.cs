@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices; // DLL Import
 using System.Collections.Specialized; // BitVector32
-using System.IO.Ports; // SerialPort Object
+using System.IO.Ports; // SerialhComPort Object
 using System.Windows.Forms;
+using System.Windows;
 
 namespace SerialPortTest
 {
@@ -51,6 +52,12 @@ namespace SerialPortTest
 
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern bool SetCommTimeouts(IntPtr hFile, [In] ref COMMTIMEOUTS lpCommTimeouts);
+
+        [DllImport("kernel32.dll")]
+        static extern bool ClearCommError(IntPtr hFile, out uint lpErrors, out LPCOMSTAT lpStat);
+
+        [DllImport("kernel32.dll")]
+        static extern bool SetupComm(IntPtr hFile, uint dwInQueue, uint dwOutQueue);
 
         [DllImport("kernel32.dll")]
         static extern bool PurgeComm(IntPtr hFile, Purge dwFlags);
@@ -145,6 +152,21 @@ namespace SerialPortTest
             ExAbort = 2,
             TxClear = 4,
             RxClear = 8,
+        }
+        #endregion
+        #region "record type"
+        struct LPCOMSTAT
+        {
+            public UInt32 fCtsHold;
+            public UInt32 fDsrHold;
+            public UInt32 fRlsdHold;
+            public UInt32 fXoffHold;
+            public UInt32 fXoffSent;
+            public UInt32 fEof;
+            public UInt32 fTxim;
+            public UInt32 fReserved;
+            public UInt32 cbInQue;
+            public UInt32 cbOutQue;
         }
         #endregion
         #region "record type"
@@ -311,13 +333,14 @@ namespace SerialPortTest
         }
         #endregion
 
-        IntPtr port { get; set; }
+        IntPtr hComPort { get; set; }
         public string PortName { get; set; }
-        public uint baudRate { get; set; }
-        public Parity parity { get; set; }
-        public byte dataBits { get; set; }
-        public StopBits stopBits { get; set; }
-        public byte[] recvBuffer { get; } = new byte[1];
+        public uint BaudRate { get; set; }
+        public Parity Parity { get; set; }
+        public byte DataBits { get; set; }
+        public StopBits StopBits { get; set; }
+        public Handshake Handshake { get; set; }
+        public byte[] RxBuffer { get; } = new byte[1];
         public bool IsOpen { get; set; }
 
         /// <summary>
@@ -331,10 +354,11 @@ namespace SerialPortTest
         public WinSerialPort(string portName, uint baudRate, Parity parity, byte dataBits, StopBits stopBits)
         {
             this.PortName = portName;
-            this.baudRate = baudRate;
-            this.parity = parity;
-            this.dataBits = dataBits;
-            this.stopBits = stopBits;
+            this.BaudRate = baudRate;
+            this.Parity = parity;
+            this.DataBits = dataBits;
+            this.StopBits = stopBits;
+            this.Handshake = Handshake.None;
             this.IsOpen = false;
         }
 
@@ -344,28 +368,28 @@ namespace SerialPortTest
         /// <returns></returns>
         public bool Open()
         {
-            port = CreateFile(PortName, DesiredAccess.GENERIC_READ | DesiredAccess.GENERIC_WRITE, 0, 0, CreationDisposition.OPEN_EXISTING, FlagsAndAttributes.FILE_ATTRIBUTE_NORMAL, IntPtr.Zero);
+            hComPort = CreateFile(PortName, DesiredAccess.GENERIC_READ | DesiredAccess.GENERIC_WRITE, 0, 0, CreationDisposition.OPEN_EXISTING, FlagsAndAttributes.FILE_ATTRIBUTE_NORMAL, IntPtr.Zero);
 
             //Open port
-            if (0 >= port.ToInt32())
+            if (0 >= hComPort.ToInt32())
                 return false;
 
             //Setting Communication
             var dcb = new DCB();
             dcb.DCBLength = (uint)Marshal.SizeOf(dcb);
-            if (!GetCommState(port, ref dcb))
+            if (!GetCommState(hComPort, ref dcb))
                 return false;
-            dcb.BaudRate = baudRate;
-            dcb.ByteSize = dataBits;
-            dcb.Parity = parity;
-            dcb.StopBits = stopBits;
+            dcb.BaudRate = BaudRate;
+            dcb.ByteSize = DataBits;
+            dcb.Parity = Parity;
+            dcb.StopBits = StopBits;
             dcb.XonChar = 0x11;
             dcb.XoffChar = 0x13;
             dcb.Binary = true;
             dcb.CheckParity = true;
             dcb.RtsControl = RtsControl.Disable;
             dcb.DtrControl = DtrControl.Disable;
-            SetCommState(port, ref dcb);
+            SetCommState(hComPort, ref dcb);
 /*
             if (!SetCommState(port, ref dcb))
             {
@@ -373,18 +397,29 @@ namespace SerialPortTest
                 MessageBox.Show("SetCommStateに失敗しました。" + errCode.ToString(), "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            //On Windows10, SetCommState returns -1, GetLastError = 87
-*/       
-            
-            //Setting Timeout
-            var Commtimeouts = new COMMTIMEOUTS();
-            if (!GetCommTimeouts(port, ref Commtimeouts))
+            On Windows10, SetCommState returns - 1, GetLastError = 87
+*/
+
+            //Initializes the communications parameters
+            if (!SetupComm(hComPort, 1024, 1024))
+            {
                 return false;
+            }
+
+            //Sets the time-out parameters
+            var Commtimeouts = new COMMTIMEOUTS();
+            if (!GetCommTimeouts(hComPort, ref Commtimeouts))
+            {
+                return false;
+            }
 
             Commtimeouts.ReadIntervalTimeout = 100;
 
-            if (!SetCommTimeouts(port, ref Commtimeouts))
+            if (!SetCommTimeouts(hComPort, ref Commtimeouts))
+            {
                 return false;
+            }
+
             this.IsOpen = true;
             return true;
         }
@@ -394,9 +429,12 @@ namespace SerialPortTest
         /// </summary>
         public void Close()
         {
-            CloseHandle(port);
-            port = IntPtr.Zero;
-            this.IsOpen = false;
+            if (hComPort != IntPtr.Zero)
+            {
+                DiscardInBuffer();
+                DiscardOutBuffer();
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -408,21 +446,30 @@ namespace SerialPortTest
         public void Write(byte[] buffer, int offset, int size)
         {
             uint writen = 0;
-            WriteFile(port, buffer, (uint)size, out writen, 0);
+            WriteFile(hComPort, buffer, (uint)size, out writen, 0);
         }
 
         /// <summary>
         /// Reads the byte.
         /// </summary>
         /// <returns></returns>
-        public int ReadByte()   //return read byte, RxData -> recvBuffer
+        public int ReadByte()   //return read byte, RxD -> RxBuffer
         {
-            uint recved = 0;
-            if (ReadFile(port, recvBuffer, 1, out recved, 0))
+            uint RxBufferSize = 0;
+            uint pError;
+            LPCOMSTAT pStat;
+
+            if (ClearCommError(hComPort, out pError, out pStat))
             {
-                if (0 < recved)
+                if (pStat.fDsrHold > 0)
                 {
-                    return (int)recved;
+                    if (ReadFile(hComPort, RxBuffer, 1, out RxBufferSize, 0))
+                    {
+                        if (RxBufferSize > 0)
+                        {
+                            return (int)RxBufferSize;
+                        }
+                    }
                 }
             }
             return -1;
@@ -433,7 +480,7 @@ namespace SerialPortTest
         /// </summary>
         public void DiscardInBuffer()
         {
-            PurgeComm(port, Purge.RxClear);
+            PurgeComm(hComPort, Purge.RxClear);
         }
 
         /// <summary>
@@ -441,7 +488,7 @@ namespace SerialPortTest
         /// </summary>
         public void DiscardOutBuffer()
         {
-            PurgeComm(port, Purge.TxClear);
+            PurgeComm(hComPort, Purge.TxClear);
         }
 
         /// <summary>
@@ -449,10 +496,9 @@ namespace SerialPortTest
         /// </summary>
         public void Dispose()
         {
-            if (port != IntPtr.Zero)
-            {
-                Close();
-            }
+            CloseHandle(hComPort);
+            hComPort = IntPtr.Zero;
+            this.IsOpen = false;
         }
 
     }
