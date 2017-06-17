@@ -11,10 +11,18 @@ using System.IO.Ports;
 
 namespace SerialPortTest
 {
+
+    /// <summary>
+    /// Form2 as Serial Device Property Setting Form
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Form2 : Form
     {
         public PropertySerialDevice xPropertySerialDevice;
-      
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form2"/> class.
+        /// </summary>
         public Form2()
         {
             InitializeComponent();
@@ -57,6 +65,11 @@ namespace SerialPortTest
             comboBox5.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Handles the Shown event of the Form2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Form2_Shown(object sender, EventArgs e)
         {
             switch (xPropertySerialDevice.BaudRate)
@@ -160,6 +173,11 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the DropDownClosed event of the comboBox1 control - BeauRate.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedIndex)
@@ -197,6 +215,11 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the DropDownClosed event of the comboBox2 control - DataBits.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void comboBox2_DropDownClosed(object sender, EventArgs e)
         {
             switch (comboBox2.SelectedIndex)
@@ -219,6 +242,12 @@ namespace SerialPortTest
             }
         }
 
+
+        /// <summary>
+        /// Handles the DropDownClosed event of the comboBox3 control - Parity.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void comboBox3_DropDownClosed(object sender, EventArgs e)
         {
             switch (comboBox3.SelectedIndex)
@@ -241,6 +270,11 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the DropDownClosed event of the comboBox4 control - StopBits.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void comboBox4_DropDownClosed(object sender, EventArgs e)
         {
             switch (comboBox4.SelectedIndex)
@@ -260,6 +294,11 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the DropDownClosed event of the comboBox5 control - Handshake.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void comboBox5_DropDownClosed(object sender, EventArgs e)
         {
             switch (comboBox5.SelectedIndex)
