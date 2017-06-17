@@ -13,12 +13,15 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
+      <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -46,6 +49,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="IsReadOnly" />
       <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -53,11 +57,11 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="ElementName" />
-      <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="SerialPortTest.MainPage" />

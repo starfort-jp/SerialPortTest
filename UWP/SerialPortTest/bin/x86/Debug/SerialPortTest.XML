@@ -86,12 +86,34 @@
             Gets the name of the serial port.
             </summary>
         </member>
+        <member name="M:SerialPortTest.MainPage.CloseDevice">
+            <summary>
+            Closes the device.
+            </summary>
+        </member>
         <member name="M:SerialPortTest.MainPage.WriteTextAsync(System.String)">
             <summary>
             Writes the Text to serial port.
             </summary>
             <param name="TxText">The Tx text.</param>
             <returns></returns>
+        </member>
+        <member name="M:SerialPortTest.MainPage.ReadTextAsync(System.Threading.CancellationToken)">
+            <summary>
+            Reads the text asynchronous.
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SerialPortTest.MainPage.CancelReadTextTask">
+            <summary>
+            Cancels the read text task.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.MainPage.ListenSerialPort">
+            <summary>
+            Listens the serial port.
+            </summary>
         </member>
         <member name="M:SerialPortTest.MainPage.#ctor">
             <summary>
