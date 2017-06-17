@@ -20,6 +20,7 @@ using Windows.Devices.SerialCommunication;
 using Windows.Devices.Enumeration;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
+using System.Text;
 
 // 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x411 を参照してください
 
@@ -48,8 +49,10 @@ namespace SerialPortTest
         DataWriter dataWriteObject = null;
         DataReader dataReaderObject = null;
 
+        private ObservableCollection<DeviceInformation> listOfDevices;
+        private CancellationTokenSource ReadCancellationTokenSource;
 
-
+//-----Internal Routines
         /// <summary>
         /// Creates the user component.
         /// </summary>
@@ -89,13 +92,7 @@ namespace SerialPortTest
             {
                 this.RxText.Text = "";
             }
-            this.TxText.IsEnabled = false;
-            this.RxText.IsEnabled = false;
-            if (SelectedSerialDevice != null)
-            {
-                SelectedSerialDevice.Dispose();
-                SelectedSerialDevice = null;
-            }
+            CloseDevice();
             this.InitializeUserComponent();
             for (int xLP = 0; xLP < 16; xLP++)
             {
@@ -114,6 +111,20 @@ namespace SerialPortTest
         }
 
         /// <summary>
+        /// Closes the device.
+        /// </summary>
+        private void CloseDevice()
+        {
+            if (SelectedSerialDevice != null)
+            {
+                SelectedSerialDevice.Dispose();
+                SelectedSerialDevice = null;
+                this.TxText.IsEnabled = false;
+                this.RxText.IsEnabled = false;
+            }
+        }
+
+        /// <summary>
         /// Writes the Text to serial port.
         /// </summary>
         /// <param name="TxText">The Tx text.</param>
@@ -124,17 +135,15 @@ namespace SerialPortTest
 
             if (TxTextString.Length != 0)
             {
-                // Load the text from the sendText input text box to the dataWriter object
-                dataWriteObject.WriteString(TxTextString);
-
-                // Launch an async task to complete the write operation
-                storeAsyncTask = dataWriteObject.StoreAsync().AsTask();
-
-                UInt32 bytesWritten = await storeAsyncTask;
+                dataWriteObject.WriteString(TxTextString);  // Load the text from the sendText input text box to the dataWriter object
+                storeAsyncTask = dataWriteObject.StoreAsync().AsTask(); // Launch an async task to complete the write operation
+                 UInt32 bytesWritten = await storeAsyncTask;
                 if (bytesWritten > 0)
                 {
-                    status.Text = TxText + ", ";
-                    status.Text += "bytes written successfully!";
+                    Encoding xEnc = Encoding.GetEncoding("us-ascii");
+                    int xSize = xEnc.GetByteCount(TxTextString);
+                    status.Text = xSize.ToString();
+                    status.Text += " bytes written successfully!";
                 }
             }
             else
@@ -143,6 +152,82 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Reads the text asynchronous.
+        /// </summary>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns></returns>
+        private async Task ReadTextAsync(CancellationToken cancellationToken)
+        {
+            Task<UInt32> loadAsyncTask;
+
+            uint ReadBufferLength = 1024;
+
+            cancellationToken.ThrowIfCancellationRequested();   // If task cancellation was requested, comply
+            dataReaderObject.InputStreamOptions = InputStreamOptions.Partial;   // Set InputStreamOptions to complete the asynchronous read operation when one or more bytes is available
+            using (var childCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken))
+            {
+                loadAsyncTask = dataReaderObject.LoadAsync(ReadBufferLength).AsTask(childCancellationTokenSource.Token);    // Create a task object to wait for data on the serialPort.InputStream
+                 UInt32 bytesRead = await loadAsyncTask; // Launch the task and wait
+                if (bytesRead > 0)
+                {
+                    RxText.Text += dataReaderObject.ReadString(bytesRead);
+                    status.Text = bytesRead.ToString() + " bytes read successfully!";
+                }
+            }
+        }
+
+        /// <summary>
+        /// Cancels the read text task.
+        /// </summary>
+        private void CancelReadTextTask()
+        {
+            if (ReadCancellationTokenSource != null)
+            {
+                if (!ReadCancellationTokenSource.IsCancellationRequested)
+                {
+                    ReadCancellationTokenSource.Cancel();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Listens the serial port.
+        /// </summary>
+        private async void ListenSerialPort()
+        {
+            try
+            {
+                if (SelectedSerialDevice != null)
+                {
+                    dataReaderObject = new DataReader(SelectedSerialDevice.InputStream);
+                    while (true)    // keep reading the serial input
+                    {
+                        await ReadTextAsync(ReadCancellationTokenSource.Token);
+                    }
+                }
+            }
+            catch (TaskCanceledException tce)
+            {
+                status.Text = "Reading task was cancelled, closing device and cleaning up";
+                CloseDevice();
+            }
+            catch (Exception ex)
+            {
+                status.Text = ex.Message;
+            }
+            finally
+            {
+                if (dataReaderObject != null)   // Cleanup once complete
+                {
+                    dataReaderObject.DetachStream();
+                    dataReaderObject = null;
+                }
+            }
+        }
+//-----
+
+        //-----Class Method
         /// <summary>
         /// Initializes a new instance of the <see cref="MainPage"/> class.
         /// </summary>
@@ -165,18 +250,15 @@ namespace SerialPortTest
         {
             string CurrentPortID;
 
-            if (SelectedSerialDevice != null)
-            {
-                SelectedSerialDevice.Dispose();
-                SelectedSerialDevice = null;
-                this.TxText.IsEnabled = false;
-                this.RxText.IsEnabled = false;
-            }
+            CloseDevice();
             CurrentPortID = SelectedPortName.Text.ToString();
             SelectedSerialDevice = await SerialDevice.FromIdAsync(CurrentPortID);
             if (SelectedSerialDevice != null)
             {
-//                await new MessageDialog("Success, created serial device.").ShowAsync();
+//                await new MessageDialog("Success, created serial device.").ShowAsync();   //Debug Message
+                RxText.Text = "";    // Set the RxText to invoke the TextChanged callback
+                ReadCancellationTokenSource = new CancellationTokenSource();    // Create cancellation token object to close I/O operations when closing the device
+                ListenSerialPort();
                 this.TxText.IsEnabled = true;
                 this.RxText.IsEnabled = true;
             }
@@ -233,5 +315,16 @@ namespace SerialPortTest
 
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TxText.Text = "";
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            RxText.Text = "";
+        }
     }
+//-----
 }

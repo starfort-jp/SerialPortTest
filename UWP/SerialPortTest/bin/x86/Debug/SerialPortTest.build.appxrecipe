@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>83aed1f3-03d9-497a-ae6c-773da3271c56</PackageIdentityName>
     <PackageIdentityPublisher>CN=Hidemichi_Gotou</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\bin\x86\Debug\SerialPortTest.exe">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\SerialPortTest.exe">
       <PackagePath>entrypoint\SerialPortTest.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -388,47 +388,47 @@
     <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\.nuget\packages\Windows-Remote-Arduino\1.4.0\lib\uap10.0\Microsoft.Maker.Serial.winmd">
       <PackagePath>Microsoft.Maker.Serial.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\bin\x86\Debug\SerialPortTest.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\SerialPortTest.xr.xml">
       <PackagePath>SerialPortTest.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Data\Visual Studio 2017\Projects\SerialPortTest\UWP\SerialPortTest\bin\x86\Debug\Core\SerialPortTest.exe">
+    <AppxPackagedFile Include="C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest_UWP\SerialPortTest\bin\x86\Debug\Core\SerialPortTest.exe">
       <PackagePath>SerialPortTest.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
