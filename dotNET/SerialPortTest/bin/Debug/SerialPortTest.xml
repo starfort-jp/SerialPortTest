@@ -4,66 +4,26 @@
         <name>SerialPortTest</name>
     </assembly>
     <members>
-        <member name="T:SerialPortTest.SerialPortProcessor">
-            <summary>
-            Serial Port virtual class
-            (Win32 API, includes .NET version as comment.)
-            </summary>
-        </member>
-        <member name="M:SerialPortTest.SerialPortProcessor.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:SerialPortTest.SerialPortProcessor"/> class.
-            </summary>
-        </member>
-        <member name="M:SerialPortTest.SerialPortProcessor.Start">
-            <summary>
-            Starts this instance.
-            </summary>
-            <returns >Success = 0, Fail = 1</returns>
-        </member>
-        <member name="M:SerialPortTest.SerialPortProcessor.ReceiveWork(System.Object)">
-            <summary>
-            Receives the work.
-            </summary>
-            <param name="target">The target.</param>
-        </member>
-        <member name="M:SerialPortTest.SerialPortProcessor.WriteData(System.Byte[])">
-            <summary>
-            Writes the data.
-            </summary>
-            <param name="buffer">The buffer.</param>
-        </member>
-        <member name="T:SerialPortTest.SerialPortProcessor.DataReceivedHandler">
-            <summary>
-            Delegate of DataReceivedHandler. 
-            </summary>
-            <param name="data">The data.</param>
-        </member>
-        <member name="E:SerialPortTest.SerialPortProcessor.DataReceived">
-            <summary>
-            Occurs when [data received].
-            </summary>
-        </member>
-        <member name="M:SerialPortTest.SerialPortProcessor.ReceiveData">
-            <summary>
-            Receives the data.
-            </summary>
-        </member>
-        <member name="M:SerialPortTest.SerialPortProcessor.Close">
-            <summary>
-            Closes this instance.
-            </summary>
-        </member>
         <member name="T:SerialPortTest.PropertySerialDevice">
             <summary>
-            Serial Device Property record
+            Serial Device Property structure Definition
             </summary>
         </member>
         <member name="T:SerialPortTest.Form1">
             <summary>
-            SerialPortTest Form Class
+            Form1 as Main Form
             </summary>
             <seealso cref="T:System.Windows.Forms.Form" />
+        </member>
+        <member name="M:SerialPortTest.Form1.Init_PortSetting">
+            <summary>
+            Initializes the port setting.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.Form1.Get_PortSetting">
+            <summary>
+            Gets the port setting.
+            </summary>
         </member>
         <member name="M:SerialPortTest.Form1.Connect_SerialDevice">
             <summary>
@@ -75,16 +35,28 @@
             Disconnects the serial device.
             </summary>
         </member>
-        <member name="M:SerialPortTest.Form1.Get_RecievedText(System.Byte[])">
+        <member name="M:SerialPortTest.Form1.PutTransmitText_Async(System.String)">
             <summary>
-            Gets the recieved text.
+            Puts the transmit text asynchronous.
             </summary>
-            <param name="buffer">The buffer.</param>
+            <param name="TxText">The tx text.</param>
         </member>
-        <member name="M:SerialPortTest.Form1.Put_TransmittingText">
+        <member name="M:SerialPortTest.Form1.GetReceivedText_Async">
             <summary>
-            Puts the transmitting text.
+            Gets the received text asynchronous.
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SerialPortTest.Form1.CancelReadTextTask">
+            <summary>
+            Cancels the read text task.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.Form1.ListenSerialPort(System.Threading.CancellationToken)">
+            <summary>
+            Listen the serial port.
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
         </member>
         <member name="M:SerialPortTest.Form1.#ctor">
             <summary>
@@ -105,6 +77,13 @@
             <param name="sender">The source of the event.</param>
             <param name="e">The <see cref="T:System.Windows.Forms.FormClosingEventArgs"/> instance containing the event data.</param>
         </member>
+        <member name="M:SerialPortTest.Form1.portSettingsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the portSettingsToolStripMenuItem control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
         <member name="M:SerialPortTest.Form1.comboBox1_DropDown(System.Object,System.EventArgs)">
             <summary>
             Handles the DropDown event of the comboBox1 control.
@@ -115,41 +94,6 @@
         <member name="M:SerialPortTest.Form1.comboBox1_DropDownClosed(System.Object,System.EventArgs)">
             <summary>
             Handles the DropDownClosed event of the comboBox1 control.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:SerialPortTest.Form1.comboBox2_DropDownClosed(System.Object,System.EventArgs)">
-            <summary>
-            Handles the DropDownClosed event of the comboBox2 control.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:SerialPortTest.Form1.comboBox3_DropDownClosed(System.Object,System.EventArgs)">
-            <summary>
-            Handles the DropDownClosed event of the comboBox3 control.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:SerialPortTest.Form1.comboBox4_DropDownClosed(System.Object,System.EventArgs)">
-            <summary>
-            Handles the DropDownClosed event of the comboBox4 control.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
-        </member>
-        <member name="M:SerialPortTest.Form1.comboBox5_DropDownClosed(System.Object,System.EventArgs)">
-            <summary>
-            Handles the DropDownClosed event of the comboBox5 control.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
-        </member>
-        <member name="M:SerialPortTest.Form1.comboBox6_DropDownClosed(System.Object,System.EventArgs)">
-            <summary>
-            Handles the DropDownClosed event of the comboBox6 control.
             </summary>
             <param name="sender">The source of the event.</param>
             <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
@@ -175,12 +119,12 @@
             <param name="sender">The source of the event.</param>
             <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
         </member>
-        <member name="M:SerialPortTest.Form1.button4_Click(System.Object,System.EventArgs)">
+        <member name="M:SerialPortTest.Form1.richTextBox1_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
             <summary>
-            Handles the Click event of the button4 control.
+            Handles the KeyPress event of the richTextBox1 control.
             </summary>
             <param name="sender">The source of the event.</param>
-            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.KeyPressEventArgs" /> instance containing the event data.</param>
         </member>
         <member name="F:SerialPortTest.Form1.components">
             <summary>
@@ -199,9 +143,112 @@
             コード エディターで変更しないでください。
             </summary>
         </member>
+        <member name="T:SerialPortTest.Form2">
+            <summary>
+            Form2 as Serial Device Property Setting Form
+            </summary>
+            <seealso cref="T:System.Windows.Forms.Form" />
+        </member>
+        <member name="M:SerialPortTest.Form2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SerialPortTest.Form2"/> class.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.Form2.Form2_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Shown event of the Form2 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:SerialPortTest.Form2.comboBox1_DropDownClosed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DropDownClosed event of the comboBox1 control - BeauRate.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:SerialPortTest.Form2.comboBox2_DropDownClosed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DropDownClosed event of the comboBox2 control - DataBits.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:SerialPortTest.Form2.comboBox3_DropDownClosed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DropDownClosed event of the comboBox3 control - Parity.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:SerialPortTest.Form2.comboBox4_DropDownClosed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DropDownClosed event of the comboBox4 control - StopBits.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:SerialPortTest.Form2.comboBox5_DropDownClosed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the DropDownClosed event of the comboBox5 control - Handshake.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:SerialPortTest.Form2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.Form2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SerialPortTest.Form2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="M:SerialPortTest.Program.Main">
             <summary>
             アプリケーションのメイン エントリ ポイントです。
+            </summary>
+        </member>
+        <member name="T:SerialPortTest.SerialPortProcessor">
+            <summary>
+            Serial Port virtual class
+            (Win32 API, includes .NET version as comment.)
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.SerialPortProcessor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SerialPortTest.SerialPortProcessor"/> class.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.SerialPortProcessor.Start">
+            <summary>
+            Starts xSerialPort instance.
+            </summary>
+            <returns >Success = 0, Fail = 1</returns>
+        </member>
+        <member name="M:SerialPortTest.SerialPortProcessor.Close">
+            <summary>
+            Closes xSerialPort instance.
+            </summary>
+        </member>
+        <member name="M:SerialPortTest.SerialPortProcessor.WriteData(System.Byte[])">
+            <summary>
+            Writes the data.
+            </summary>
+            <param name="buffer">The buffer.</param>
+        </member>
+        <member name="M:SerialPortTest.SerialPortProcessor.ReceiveData">
+            <summary>
+            Receives the data.
             </summary>
         </member>
         <member name="T:SerialPortTest.WinSerialPort">
@@ -307,7 +354,7 @@
         </member>
         <member name="P:SerialPortTest.Properties.Resources.ResourceManager">
             <summary>
-              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+              このクラスで使用されるキャッシュされた ResourceManager インスタンスを返します。
             </summary>
         </member>
         <member name="P:SerialPortTest.Properties.Resources.Culture">

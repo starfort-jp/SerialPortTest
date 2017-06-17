@@ -1,9 +1,10 @@
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe.config
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.xml
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe
+C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.pdb
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.Form1.resources
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.Form2.resources
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.Properties.Resources.resources
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.csproj.GenerateResource.Cache
-C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe.config
-C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.exe
-C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\bin\Debug\SerialPortTest.pdb
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.exe
 C:\Users\Hidemichi_Gotou\Documents\Visual Studio 2017\Projects\SerialPortTest\SerialPortTest\obj\Debug\SerialPortTest.pdb
