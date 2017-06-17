@@ -13,6 +13,9 @@ using System.Management;
 
 namespace SerialPortTest
 {
+    /// <summary>
+    /// Serial Device Property structure Definition
+    /// </summary>
     public struct PropertySerialDevice
     {
         public string PortName;
@@ -23,6 +26,10 @@ namespace SerialPortTest
         public Handshake Handshake;
     }
 
+    /// <summary>
+    /// Form1 as Main Form
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Form1 : Form
     {
         public SerialPortProcessor xSerialDevice = null;
@@ -32,6 +39,9 @@ namespace SerialPortTest
         private string RxText = "";
         private bool IsWriting = false;
 
+        /// <summary>
+        /// Initializes the port setting.
+        /// </summary>
         private void Init_PortSetting()
         {
             xSerialDevice.BaudRate = 9600;
@@ -41,6 +51,9 @@ namespace SerialPortTest
             xSerialDevice.Handshake = Handshake.None;
         }
 
+        /// <summary>
+        /// Gets the port setting.
+        /// </summary>
         private void Get_PortSetting()
         {
             Form2 _Form2 = new Form2();
@@ -58,6 +71,9 @@ namespace SerialPortTest
             _Form2.Dispose();
         }
 
+        /// <summary>
+        /// Connects the serial device.
+        /// </summary>
         public void Connect_SerialDevice()
         {
             if (xSerialDevice.PortName != "")
@@ -72,6 +88,9 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Disconnects the serial device.
+        /// </summary>
         public void Disconnect_SerialDevice()
         {
             if (xSerialDevice != null)
@@ -82,7 +101,11 @@ namespace SerialPortTest
                 button1.Text = "CONNECT";
             }
         }
-        
+
+        /// <summary>
+        /// Puts the transmit text asynchronous.
+        /// </summary>
+        /// <param name="TxText">The tx text.</param>
         public async void PutTransmitText_Async(string TxText)
         {
             byte[] TxData = System.Text.Encoding.ASCII.GetBytes(TxText);    //ASCII
@@ -96,7 +119,11 @@ namespace SerialPortTest
             textBox1.Text = "Write " + Convert.ToString(xSize) + " byte.";
         }
 
-        public async Task GetRecievedText_Async()
+        /// <summary>
+        /// Gets the received text asynchronous.
+        /// </summary>
+        /// <returns></returns>
+        public async Task GetReceivedText_Async()
         {
             byte[] RxDataRaw, RxData;
             int xLength;
@@ -114,6 +141,9 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Cancels the read text task.
+        /// </summary>
         private void CancelReadTextTask()
         {
             if (ReadCancellationTokenSource != null)
@@ -125,6 +155,10 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Listen the serial port.
+        /// </summary>
+        /// <param name="cancellationToken">The cancellation token.</param>
         private async void ListenSerialPort(CancellationToken cancellationToken)
         {
             try
@@ -135,7 +169,7 @@ namespace SerialPortTest
                     {
                         if (!this.IsWriting) 
                         {
-                            await GetRecievedText_Async();
+                            await GetReceivedText_Async();
                             if (RxText != "")
                             {
                                 int xSize = RxText.Length;
@@ -158,11 +192,19 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form1"/> class.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the Shown event of the Form1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Form1_Shown(object sender, EventArgs e)
         {
             xSerialDevice = new SerialPortProcessor();
@@ -172,6 +214,11 @@ namespace SerialPortTest
             Init_PortSetting();
         }
 
+        /// <summary>
+        /// Handles the FormClosing event of the Form1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="FormClosingEventArgs"/> instance containing the event data.</param>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (xSerialDevice != null)
@@ -180,11 +227,21 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the portSettingsToolStripMenuItem control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void portSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Get_PortSetting();
         }
 
+        /// <summary>
+        /// Handles the DropDown event of the comboBox1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
             string xCaption;
@@ -220,6 +277,11 @@ namespace SerialPortTest
 
         }
 
+        /// <summary>
+        /// Handles the DropDownClosed event of the comboBox1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs" /> instance containing the event data.</param>
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex >= 0)
@@ -228,6 +290,11 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the button1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs" /> instance containing the event data.</param>
         private void button1_Click(object sender, EventArgs e)
         {
             if (xConnected == false)
@@ -240,6 +307,11 @@ namespace SerialPortTest
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the button2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs" /> instance containing the event data.</param>
         private void button2_Click(object sender, EventArgs e)
         {
             IsWriting = true;
@@ -248,6 +320,11 @@ namespace SerialPortTest
             IsWriting = false;
         }
 
+        /// <summary>
+        /// Handles the Click event of the button3 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs" /> instance containing the event data.</param>
         private void button3_Click(object sender, EventArgs e)
         {
             IsWriting = true;
@@ -256,6 +333,11 @@ namespace SerialPortTest
             IsWriting = false;
         }
 
+        /// <summary>
+        /// Handles the KeyPress event of the richTextBox1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.Forms.KeyPressEventArgs" /> instance containing the event data.</param>
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             string TxText;
