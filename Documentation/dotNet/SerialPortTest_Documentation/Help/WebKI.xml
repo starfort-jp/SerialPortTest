@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AbortOnError property" Url="html/P_SerialPortTest_WinSerialPort_DCB_AbortOnError.htm" />
+  <HelpKINode Title="BaudRate field">
+    <HelpKINode Title="PropertySerialDevice.BaudRate Field" Url="html/F_SerialPortTest_PropertySerialDevice_BaudRate.htm" />
+    <HelpKINode Title="WinSerialPort.DCB.BaudRate Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_BaudRate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaudRate property">
+    <HelpKINode Title="SerialPortProcessor.BaudRate Property " Url="html/P_SerialPortTest_SerialPortProcessor_BaudRate.htm" />
+    <HelpKINode Title="WinSerialPort.BaudRate Property " Url="html/P_SerialPortTest_WinSerialPort_BaudRate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Binary property" Url="html/P_SerialPortTest_WinSerialPort_DCB_Binary.htm" />
+  <HelpKINode Title="ByteSize field" Url="html/F_SerialPortTest_WinSerialPort_DCB_ByteSize.htm" />
+  <HelpKINode Title="CheckParity property" Url="html/P_SerialPortTest_WinSerialPort_DCB_CheckParity.htm" />
+  <HelpKINode Title="Close method">
+    <HelpKINode Title="SerialPortProcessor.Close Method " Url="html/M_SerialPortTest_SerialPortProcessor_Close.htm" />
+    <HelpKINode Title="WinSerialPort.Close Method " Url="html/M_SerialPortTest_WinSerialPort_Close.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CloseHandle method" Url="html/M_SerialPortTest_WinSerialPort_CloseHandle.htm" />
+  <HelpKINode Title="Connect_SerialDevice method" Url="html/M_SerialPortTest_Form1_Connect_SerialDevice.htm" />
+  <HelpKINode Title="DataBits field" Url="html/F_SerialPortTest_PropertySerialDevice_DataBits.htm" />
+  <HelpKINode Title="DataBits property">
+    <HelpKINode Title="SerialPortProcessor.DataBits Property " Url="html/P_SerialPortTest_SerialPortProcessor_DataBits.htm" />
+    <HelpKINode Title="WinSerialPort.DataBits Property " Url="html/P_SerialPortTest_WinSerialPort_DataBits.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DCB structure">
+    <HelpKINode Title="fields" Url="html/Fields_T_SerialPortTest_WinSerialPort_DCB.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SerialPortTest_WinSerialPort_DCB.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_SerialPortTest_WinSerialPort_DCB.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DCBLength field" Url="html/F_SerialPortTest_WinSerialPort_DCB_DCBLength.htm" />
+  <HelpKINode Title="Disable enumeration member">
+    <HelpKINode Title="WinSerialPort.DtrControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_DtrControl.htm" />
+    <HelpKINode Title="WinSerialPort.RtsControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DiscardInBuffer method" Url="html/M_SerialPortTest_WinSerialPort_DiscardInBuffer.htm" />
+  <HelpKINode Title="DiscardOutBuffer method" Url="html/M_SerialPortTest_WinSerialPort_DiscardOutBuffer.htm" />
+  <HelpKINode Title="Disconnect_SerialDevice method" Url="html/M_SerialPortTest_Form1_Disconnect_SerialDevice.htm" />
+  <HelpKINode Title="Dispose method" Url="html/M_SerialPortTest_WinSerialPort_Dispose.htm" />
+  <HelpKINode Title="DsrSensitivity property" Url="html/P_SerialPortTest_WinSerialPort_DCB_DsrSensitivity.htm" />
+  <HelpKINode Title="DtrControl property" Url="html/P_SerialPortTest_WinSerialPort_DCB_DtrControl.htm" />
+  <HelpKINode Title="Enable enumeration member">
+    <HelpKINode Title="WinSerialPort.DtrControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_DtrControl.htm" />
+    <HelpKINode Title="WinSerialPort.RtsControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EofChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_EofChar.htm" />
+  <HelpKINode Title="ErrorChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_ErrorChar.htm" />
+  <HelpKINode Title="EvtChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_EvtChar.htm" />
+  <HelpKINode Title="ExAbort enumeration member" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+  <HelpKINode Title="Form1 class">
+    <HelpKINode Title="Form1 Class" Url="html/T_SerialPortTest_Form1.htm" />
+    <HelpKINode Title="about Form1 class" Url="html/T_SerialPortTest_Form1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_SerialPortTest_Form1__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_SerialPortTest_Form1.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_SerialPortTest_Form1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SerialPortTest_Form1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_SerialPortTest_Form1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form1.Connect_SerialDevice method" Url="html/M_SerialPortTest_Form1_Connect_SerialDevice.htm" />
+  <HelpKINode Title="Form1.Disconnect_SerialDevice method" Url="html/M_SerialPortTest_Form1_Disconnect_SerialDevice.htm" />
+  <HelpKINode Title="Form1.Form1 constructor" Url="html/M_SerialPortTest_Form1__ctor.htm" />
+  <HelpKINode Title="Form1.GetReceivedText_Async method" Url="html/M_SerialPortTest_Form1_GetReceivedText_Async.htm" />
+  <HelpKINode Title="Form1.PutTransmitText_Async method" Url="html/M_SerialPortTest_Form1_PutTransmitText_Async.htm" />
+  <HelpKINode Title="Form1.xSerialDevice field" Url="html/F_SerialPortTest_Form1_xSerialDevice.htm" />
+  <HelpKINode Title="Form2 class">
+    <HelpKINode Title="Form2 Class" Url="html/T_SerialPortTest_Form2.htm" />
+    <HelpKINode Title="about Form2 class" Url="html/T_SerialPortTest_Form2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_SerialPortTest_Form2__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_SerialPortTest_Form2.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_SerialPortTest_Form2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SerialPortTest_Form2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_SerialPortTest_Form2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form2.Form2 constructor" Url="html/M_SerialPortTest_Form2__ctor.htm" />
+  <HelpKINode Title="Form2.xPropertySerialDevice field" Url="html/F_SerialPortTest_Form2_xPropertySerialDevice.htm" />
+  <HelpKINode Title="GetReceivedText_Async method" Url="html/M_SerialPortTest_Form1_GetReceivedText_Async.htm" />
+  <HelpKINode Title="Handshake enumeration member">
+    <HelpKINode Title="WinSerialPort.DtrControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_DtrControl.htm" />
+    <HelpKINode Title="WinSerialPort.RtsControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Handshake field" Url="html/F_SerialPortTest_PropertySerialDevice_Handshake.htm" />
+  <HelpKINode Title="Handshake property">
+    <HelpKINode Title="SerialPortProcessor.Handshake Property " Url="html/P_SerialPortTest_SerialPortProcessor_Handshake.htm" />
+    <HelpKINode Title="WinSerialPort.Handshake Property " Url="html/P_SerialPortTest_WinSerialPort_Handshake.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InX property" Url="html/P_SerialPortTest_WinSerialPort_DCB_InX.htm" />
+  <HelpKINode Title="IsOpen property" Url="html/P_SerialPortTest_WinSerialPort_IsOpen.htm" />
+  <HelpKINode Title="Null property" Url="html/P_SerialPortTest_WinSerialPort_DCB_Null.htm" />
+  <HelpKINode Title="Open method" Url="html/M_SerialPortTest_WinSerialPort_Open.htm" />
+  <HelpKINode Title="OutX property" Url="html/P_SerialPortTest_WinSerialPort_DCB_OutX.htm" />
+  <HelpKINode Title="OutxCtsFlow property" Url="html/P_SerialPortTest_WinSerialPort_DCB_OutxCtsFlow.htm" />
+  <HelpKINode Title="OutxDsrFlow property" Url="html/P_SerialPortTest_WinSerialPort_DCB_OutxDsrFlow.htm" />
+  <HelpKINode Title="Parity field">
+    <HelpKINode Title="PropertySerialDevice.Parity Field" Url="html/F_SerialPortTest_PropertySerialDevice_Parity.htm" />
+    <HelpKINode Title="WinSerialPort.DCB.Parity Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_Parity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Parity property">
+    <HelpKINode Title="SerialPortProcessor.Parity Property " Url="html/P_SerialPortTest_SerialPortProcessor_Parity.htm" />
+    <HelpKINode Title="WinSerialPort.Parity Property " Url="html/P_SerialPortTest_WinSerialPort_Parity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PortName field" Url="html/F_SerialPortTest_PropertySerialDevice_PortName.htm" />
+  <HelpKINode Title="PortName property">
+    <HelpKINode Title="SerialPortProcessor.PortName Property " Url="html/P_SerialPortTest_SerialPortProcessor_PortName.htm" />
+    <HelpKINode Title="WinSerialPort.PortName Property " Url="html/P_SerialPortTest_WinSerialPort_PortName.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Program class">
+    <HelpKINode Title="Program Class" Url="html/T_SerialPortTest_Program.htm" />
+    <HelpKINode Title="about Program class" Url="html/T_SerialPortTest_Program.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertySerialDevice structure">
+    <HelpKINode Title="PropertySerialDevice Structure" Url="html/T_SerialPortTest_PropertySerialDevice.htm" />
+    <HelpKINode Title="about PropertySerialDevice structure" Url="html/T_SerialPortTest_PropertySerialDevice.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_SerialPortTest_PropertySerialDevice.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SerialPortTest_PropertySerialDevice.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertySerialDevice.BaudRate field" Url="html/F_SerialPortTest_PropertySerialDevice_BaudRate.htm" />
+  <HelpKINode Title="PropertySerialDevice.DataBits field" Url="html/F_SerialPortTest_PropertySerialDevice_DataBits.htm" />
+  <HelpKINode Title="PropertySerialDevice.Handshake field" Url="html/F_SerialPortTest_PropertySerialDevice_Handshake.htm" />
+  <HelpKINode Title="PropertySerialDevice.Parity field" Url="html/F_SerialPortTest_PropertySerialDevice_Parity.htm" />
+  <HelpKINode Title="PropertySerialDevice.PortName field" Url="html/F_SerialPortTest_PropertySerialDevice_PortName.htm" />
+  <HelpKINode Title="PropertySerialDevice.StopBits field" Url="html/F_SerialPortTest_PropertySerialDevice_StopBits.htm" />
+  <HelpKINode Title="PutTransmitText_Async method" Url="html/M_SerialPortTest_Form1_PutTransmitText_Async.htm" />
+  <HelpKINode Title="ReadByte method" Url="html/M_SerialPortTest_WinSerialPort_ReadByte.htm" />
+  <HelpKINode Title="ReceiveData method" Url="html/M_SerialPortTest_SerialPortProcessor_ReceiveData.htm" />
+  <HelpKINode Title="ReplaceErrorChar property" Url="html/P_SerialPortTest_WinSerialPort_DCB_ReplaceErrorChar.htm" />
+  <HelpKINode Title="RtsControl property" Url="html/P_SerialPortTest_WinSerialPort_DCB_RtsControl.htm" />
+  <HelpKINode Title="RxBuffer property" Url="html/P_SerialPortTest_WinSerialPort_RxBuffer.htm" />
+  <HelpKINode Title="RxClear enumeration member" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+  <HelpKINode Title="SerialPortProcessor class">
+    <HelpKINode Title="SerialPortProcessor Class" Url="html/T_SerialPortTest_SerialPortProcessor.htm" />
+    <HelpKINode Title="about SerialPortProcessor class" Url="html/T_SerialPortTest_SerialPortProcessor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_SerialPortTest_SerialPortProcessor__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SerialPortTest_SerialPortProcessor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_SerialPortTest_SerialPortProcessor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SerialPortProcessor.BaudRate property" Url="html/P_SerialPortTest_SerialPortProcessor_BaudRate.htm" />
+  <HelpKINode Title="SerialPortProcessor.Close method" Url="html/M_SerialPortTest_SerialPortProcessor_Close.htm" />
+  <HelpKINode Title="SerialPortProcessor.DataBits property" Url="html/P_SerialPortTest_SerialPortProcessor_DataBits.htm" />
+  <HelpKINode Title="SerialPortProcessor.Handshake property" Url="html/P_SerialPortTest_SerialPortProcessor_Handshake.htm" />
+  <HelpKINode Title="SerialPortProcessor.Parity property" Url="html/P_SerialPortTest_SerialPortProcessor_Parity.htm" />
+  <HelpKINode Title="SerialPortProcessor.PortName property" Url="html/P_SerialPortTest_SerialPortProcessor_PortName.htm" />
+  <HelpKINode Title="SerialPortProcessor.ReceiveData method" Url="html/M_SerialPortTest_SerialPortProcessor_ReceiveData.htm" />
+  <HelpKINode Title="SerialPortProcessor.SerialPortProcessor constructor" Url="html/M_SerialPortTest_SerialPortProcessor__ctor.htm" />
+  <HelpKINode Title="SerialPortProcessor.Start method" Url="html/M_SerialPortTest_SerialPortProcessor_Start.htm" />
+  <HelpKINode Title="SerialPortProcessor.StopBits property" Url="html/P_SerialPortTest_SerialPortProcessor_StopBits.htm" />
+  <HelpKINode Title="SerialPortProcessor.WriteData method" Url="html/M_SerialPortTest_SerialPortProcessor_WriteData.htm" />
+  <HelpKINode Title="SerialPortTest namespace" Url="html/N_SerialPortTest.htm" />
+  <HelpKINode Title="SerialPortTest.Form1 class" Url="html/T_SerialPortTest_Form1.htm" />
+  <HelpKINode Title="SerialPortTest.Form2 class" Url="html/T_SerialPortTest_Form2.htm" />
+  <HelpKINode Title="SerialPortTest.Program class" Url="html/T_SerialPortTest_Program.htm" />
+  <HelpKINode Title="SerialPortTest.PropertySerialDevice structure" Url="html/T_SerialPortTest_PropertySerialDevice.htm" />
+  <HelpKINode Title="SerialPortTest.SerialPortProcessor class" Url="html/T_SerialPortTest_SerialPortProcessor.htm" />
+  <HelpKINode Title="SerialPortTest.WinSerialPort class" Url="html/T_SerialPortTest_WinSerialPort.htm" />
+  <HelpKINode Title="SerialPortTest.WinSerialPort.DCB structure" Url="html/T_SerialPortTest_WinSerialPort_DCB.htm" />
+  <HelpKINode Title="SerialPortTest.WinSerialPort.DtrControl enumeration" Url="html/T_SerialPortTest_WinSerialPort_DtrControl.htm" />
+  <HelpKINode Title="SerialPortTest.WinSerialPort.Purge enumeration" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+  <HelpKINode Title="SerialPortTest.WinSerialPort.RtsControl enumeration" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  <HelpKINode Title="Start method" Url="html/M_SerialPortTest_SerialPortProcessor_Start.htm" />
+  <HelpKINode Title="StopBits field">
+    <HelpKINode Title="PropertySerialDevice.StopBits Field" Url="html/F_SerialPortTest_PropertySerialDevice_StopBits.htm" />
+    <HelpKINode Title="WinSerialPort.DCB.StopBits Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_StopBits.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StopBits property">
+    <HelpKINode Title="SerialPortProcessor.StopBits Property " Url="html/P_SerialPortTest_SerialPortProcessor_StopBits.htm" />
+    <HelpKINode Title="WinSerialPort.StopBits Property " Url="html/P_SerialPortTest_WinSerialPort_StopBits.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Toggle enumeration member" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  <HelpKINode Title="TxAbort enumeration member" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+  <HelpKINode Title="TxClear enumeration member" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+  <HelpKINode Title="TxContinueOnXoff property" Url="html/P_SerialPortTest_WinSerialPort_DCB_TxContinueOnXoff.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/d467829c-7425-43bc-ad59-b911ee7ce2c1.htm" />
+    <HelpKINode Title="history" Url="html/a18a5f30-058d-462a-be6b-2db5df893163.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Welcome" Url="html/63ce297a-fa3e-4785-8aa6-676a056991cb.htm" />
+  <HelpKINode Title="WinSerialPort class">
+    <HelpKINode Title="WinSerialPort Class" Url="html/T_SerialPortTest_WinSerialPort.htm" />
+    <HelpKINode Title="about WinSerialPort class" Url="html/T_SerialPortTest_WinSerialPort.htm" />
+    <HelpKINode Title="constructor" Url="html/M_SerialPortTest_WinSerialPort__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_SerialPortTest_WinSerialPort.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_SerialPortTest_WinSerialPort.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WinSerialPort.BaudRate property" Url="html/P_SerialPortTest_WinSerialPort_BaudRate.htm" />
+  <HelpKINode Title="WinSerialPort.Close method" Url="html/M_SerialPortTest_WinSerialPort_Close.htm" />
+  <HelpKINode Title="WinSerialPort.CloseHandle method" Url="html/M_SerialPortTest_WinSerialPort_CloseHandle.htm" />
+  <HelpKINode Title="WinSerialPort.DataBits property" Url="html/P_SerialPortTest_WinSerialPort_DataBits.htm" />
+  <HelpKINode Title="WinSerialPort.DCB structure">
+    <HelpKINode Title="WinSerialPort.DCB Structure" Url="html/T_SerialPortTest_WinSerialPort_DCB.htm" />
+    <HelpKINode Title="about WinSerialPort.DCB structure" Url="html/T_SerialPortTest_WinSerialPort_DCB.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WinSerialPort.DCB.AbortOnError property" Url="html/P_SerialPortTest_WinSerialPort_DCB_AbortOnError.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.BaudRate field" Url="html/F_SerialPortTest_WinSerialPort_DCB_BaudRate.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.Binary property" Url="html/P_SerialPortTest_WinSerialPort_DCB_Binary.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.ByteSize field" Url="html/F_SerialPortTest_WinSerialPort_DCB_ByteSize.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.CheckParity property" Url="html/P_SerialPortTest_WinSerialPort_DCB_CheckParity.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.DCBLength field" Url="html/F_SerialPortTest_WinSerialPort_DCB_DCBLength.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.DsrSensitivity property" Url="html/P_SerialPortTest_WinSerialPort_DCB_DsrSensitivity.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.DtrControl property" Url="html/P_SerialPortTest_WinSerialPort_DCB_DtrControl.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.EofChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_EofChar.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.ErrorChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_ErrorChar.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.EvtChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_EvtChar.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.InX property" Url="html/P_SerialPortTest_WinSerialPort_DCB_InX.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.Null property" Url="html/P_SerialPortTest_WinSerialPort_DCB_Null.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.OutX property" Url="html/P_SerialPortTest_WinSerialPort_DCB_OutX.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.OutxCtsFlow property" Url="html/P_SerialPortTest_WinSerialPort_DCB_OutxCtsFlow.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.OutxDsrFlow property" Url="html/P_SerialPortTest_WinSerialPort_DCB_OutxDsrFlow.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.Parity field" Url="html/F_SerialPortTest_WinSerialPort_DCB_Parity.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.ReplaceErrorChar property" Url="html/P_SerialPortTest_WinSerialPort_DCB_ReplaceErrorChar.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.RtsControl property" Url="html/P_SerialPortTest_WinSerialPort_DCB_RtsControl.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.StopBits field" Url="html/F_SerialPortTest_WinSerialPort_DCB_StopBits.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.TxContinueOnXoff property" Url="html/P_SerialPortTest_WinSerialPort_DCB_TxContinueOnXoff.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.XoffChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XoffChar.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.XoffLim field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XoffLim.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.XonChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XonChar.htm" />
+  <HelpKINode Title="WinSerialPort.DCB.XonLim field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XonLim.htm" />
+  <HelpKINode Title="WinSerialPort.DiscardInBuffer method" Url="html/M_SerialPortTest_WinSerialPort_DiscardInBuffer.htm" />
+  <HelpKINode Title="WinSerialPort.DiscardOutBuffer method" Url="html/M_SerialPortTest_WinSerialPort_DiscardOutBuffer.htm" />
+  <HelpKINode Title="WinSerialPort.Dispose method" Url="html/M_SerialPortTest_WinSerialPort_Dispose.htm" />
+  <HelpKINode Title="WinSerialPort.DtrControl enumeration" Url="html/T_SerialPortTest_WinSerialPort_DtrControl.htm" />
+  <HelpKINode Title="WinSerialPort.Handshake property" Url="html/P_SerialPortTest_WinSerialPort_Handshake.htm" />
+  <HelpKINode Title="WinSerialPort.IsOpen property" Url="html/P_SerialPortTest_WinSerialPort_IsOpen.htm" />
+  <HelpKINode Title="WinSerialPort.Open method" Url="html/M_SerialPortTest_WinSerialPort_Open.htm" />
+  <HelpKINode Title="WinSerialPort.Parity property" Url="html/P_SerialPortTest_WinSerialPort_Parity.htm" />
+  <HelpKINode Title="WinSerialPort.PortName property" Url="html/P_SerialPortTest_WinSerialPort_PortName.htm" />
+  <HelpKINode Title="WinSerialPort.Purge enumeration" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+  <HelpKINode Title="WinSerialPort.ReadByte method" Url="html/M_SerialPortTest_WinSerialPort_ReadByte.htm" />
+  <HelpKINode Title="WinSerialPort.RtsControl enumeration" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  <HelpKINode Title="WinSerialPort.RxBuffer property" Url="html/P_SerialPortTest_WinSerialPort_RxBuffer.htm" />
+  <HelpKINode Title="WinSerialPort.StopBits property" Url="html/P_SerialPortTest_WinSerialPort_StopBits.htm" />
+  <HelpKINode Title="WinSerialPort.WinSerialPort constructor" Url="html/M_SerialPortTest_WinSerialPort__ctor.htm" />
+  <HelpKINode Title="WinSerialPort.Write method" Url="html/M_SerialPortTest_WinSerialPort_Write.htm" />
+  <HelpKINode Title="Write method" Url="html/M_SerialPortTest_WinSerialPort_Write.htm" />
+  <HelpKINode Title="WriteData method" Url="html/M_SerialPortTest_SerialPortProcessor_WriteData.htm" />
+  <HelpKINode Title="XoffChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XoffChar.htm" />
+  <HelpKINode Title="XoffLim field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XoffLim.htm" />
+  <HelpKINode Title="XonChar field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XonChar.htm" />
+  <HelpKINode Title="XonLim field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XonLim.htm" />
+  <HelpKINode Title="xPropertySerialDevice field" Url="html/F_SerialPortTest_Form2_xPropertySerialDevice.htm" />
+  <HelpKINode Title="xSerialDevice field" Url="html/F_SerialPortTest_Form1_xSerialDevice.htm" />
+</HelpKI>
