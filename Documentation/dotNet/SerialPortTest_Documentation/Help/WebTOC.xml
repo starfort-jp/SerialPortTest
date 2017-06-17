@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="b9cd019e-3b2d-4173-8edd-2aa79fc49def" Title="SerialPortTest" Url="html/N_SerialPortTest.htm">
+    <HelpTOCNode Id="af527bab-cccc-4254-8634-85a8f3ca6c7c" Title="Form1 Class" Url="html/T_SerialPortTest_Form1.htm">
+      <HelpTOCNode Title="Form1 Constructor " Url="html/M_SerialPortTest_Form1__ctor.htm" />
+      <HelpTOCNode Title="Form1 Properties" Url="html/Properties_T_SerialPortTest_Form1.htm" />
+      <HelpTOCNode Id="2b150a3d-bec6-46fc-9d5e-7f338623801a" Title="Form1 Methods" Url="html/Methods_T_SerialPortTest_Form1.htm">
+        <HelpTOCNode Title="Connect_SerialDevice Method " Url="html/M_SerialPortTest_Form1_Connect_SerialDevice.htm" />
+        <HelpTOCNode Title="Disconnect_SerialDevice Method " Url="html/M_SerialPortTest_Form1_Disconnect_SerialDevice.htm" />
+        <HelpTOCNode Title="GetReceivedText_Async Method " Url="html/M_SerialPortTest_Form1_GetReceivedText_Async.htm" />
+        <HelpTOCNode Title="PutTransmitText_Async Method " Url="html/M_SerialPortTest_Form1_PutTransmitText_Async.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Form1 Events" Url="html/Events_T_SerialPortTest_Form1.htm" />
+      <HelpTOCNode Id="1e3601e2-3b77-42cc-b294-7726b1841098" Title="Form1 Fields" Url="html/Fields_T_SerialPortTest_Form1.htm">
+        <HelpTOCNode Title="xSerialDevice Field" Url="html/F_SerialPortTest_Form1_xSerialDevice.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f312c02a-fe4e-4cff-9b35-3644aec9753f" Title="Form2 Class" Url="html/T_SerialPortTest_Form2.htm">
+      <HelpTOCNode Title="Form2 Constructor " Url="html/M_SerialPortTest_Form2__ctor.htm" />
+      <HelpTOCNode Title="Form2 Properties" Url="html/Properties_T_SerialPortTest_Form2.htm" />
+      <HelpTOCNode Title="Form2 Methods" Url="html/Methods_T_SerialPortTest_Form2.htm" />
+      <HelpTOCNode Title="Form2 Events" Url="html/Events_T_SerialPortTest_Form2.htm" />
+      <HelpTOCNode Id="e466ebfb-78f5-45ec-9a21-7d76cdbc5bdb" Title="Form2 Fields" Url="html/Fields_T_SerialPortTest_Form2.htm">
+        <HelpTOCNode Title="xPropertySerialDevice Field" Url="html/F_SerialPortTest_Form2_xPropertySerialDevice.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="Program Class" Url="html/T_SerialPortTest_Program.htm" />
+    <HelpTOCNode Id="d2a894e1-0595-4357-a729-281684bd02cf" Title="PropertySerialDevice Structure" Url="html/T_SerialPortTest_PropertySerialDevice.htm">
+      <HelpTOCNode Title="PropertySerialDevice Methods" Url="html/Methods_T_SerialPortTest_PropertySerialDevice.htm" />
+      <HelpTOCNode Id="77a5718a-4210-41bf-b6a4-634088b4ffd6" Title="PropertySerialDevice Fields" Url="html/Fields_T_SerialPortTest_PropertySerialDevice.htm">
+        <HelpTOCNode Title="BaudRate Field" Url="html/F_SerialPortTest_PropertySerialDevice_BaudRate.htm" />
+        <HelpTOCNode Title="DataBits Field" Url="html/F_SerialPortTest_PropertySerialDevice_DataBits.htm" />
+        <HelpTOCNode Title="Handshake Field" Url="html/F_SerialPortTest_PropertySerialDevice_Handshake.htm" />
+        <HelpTOCNode Title="Parity Field" Url="html/F_SerialPortTest_PropertySerialDevice_Parity.htm" />
+        <HelpTOCNode Title="PortName Field" Url="html/F_SerialPortTest_PropertySerialDevice_PortName.htm" />
+        <HelpTOCNode Title="StopBits Field" Url="html/F_SerialPortTest_PropertySerialDevice_StopBits.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5eb6eeac-f4e2-46f7-8bc3-4c41c1ae7908" Title="SerialPortProcessor Class" Url="html/T_SerialPortTest_SerialPortProcessor.htm">
+      <HelpTOCNode Title="SerialPortProcessor Constructor " Url="html/M_SerialPortTest_SerialPortProcessor__ctor.htm" />
+      <HelpTOCNode Id="b1d5feb5-2a0a-40cf-bbdd-41e4a0edf15d" Title="SerialPortProcessor Properties" Url="html/Properties_T_SerialPortTest_SerialPortProcessor.htm">
+        <HelpTOCNode Title="BaudRate Property " Url="html/P_SerialPortTest_SerialPortProcessor_BaudRate.htm" />
+        <HelpTOCNode Title="DataBits Property " Url="html/P_SerialPortTest_SerialPortProcessor_DataBits.htm" />
+        <HelpTOCNode Title="Handshake Property " Url="html/P_SerialPortTest_SerialPortProcessor_Handshake.htm" />
+        <HelpTOCNode Title="Parity Property " Url="html/P_SerialPortTest_SerialPortProcessor_Parity.htm" />
+        <HelpTOCNode Title="PortName Property " Url="html/P_SerialPortTest_SerialPortProcessor_PortName.htm" />
+        <HelpTOCNode Title="StopBits Property " Url="html/P_SerialPortTest_SerialPortProcessor_StopBits.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cd1e8793-a605-4f2d-abd0-f3586d4f7035" Title="SerialPortProcessor Methods" Url="html/Methods_T_SerialPortTest_SerialPortProcessor.htm">
+        <HelpTOCNode Title="Close Method " Url="html/M_SerialPortTest_SerialPortProcessor_Close.htm" />
+        <HelpTOCNode Title="ReceiveData Method " Url="html/M_SerialPortTest_SerialPortProcessor_ReceiveData.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M_SerialPortTest_SerialPortProcessor_Start.htm" />
+        <HelpTOCNode Title="WriteData Method " Url="html/M_SerialPortTest_SerialPortProcessor_WriteData.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e9a9eff0-31bf-43f5-91a6-803a74eb2343" Title="WinSerialPort Class" Url="html/T_SerialPortTest_WinSerialPort.htm">
+      <HelpTOCNode Title="WinSerialPort Constructor " Url="html/M_SerialPortTest_WinSerialPort__ctor.htm" />
+      <HelpTOCNode Id="04558ada-abe1-4ad3-9925-a8b4d2da9cbc" Title="WinSerialPort Properties" Url="html/Properties_T_SerialPortTest_WinSerialPort.htm">
+        <HelpTOCNode Title="BaudRate Property " Url="html/P_SerialPortTest_WinSerialPort_BaudRate.htm" />
+        <HelpTOCNode Title="DataBits Property " Url="html/P_SerialPortTest_WinSerialPort_DataBits.htm" />
+        <HelpTOCNode Title="Handshake Property " Url="html/P_SerialPortTest_WinSerialPort_Handshake.htm" />
+        <HelpTOCNode Title="IsOpen Property " Url="html/P_SerialPortTest_WinSerialPort_IsOpen.htm" />
+        <HelpTOCNode Title="Parity Property " Url="html/P_SerialPortTest_WinSerialPort_Parity.htm" />
+        <HelpTOCNode Title="PortName Property " Url="html/P_SerialPortTest_WinSerialPort_PortName.htm" />
+        <HelpTOCNode Title="RxBuffer Property " Url="html/P_SerialPortTest_WinSerialPort_RxBuffer.htm" />
+        <HelpTOCNode Title="StopBits Property " Url="html/P_SerialPortTest_WinSerialPort_StopBits.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="70b5321c-b6ff-484f-9047-94ddf38b165f" Title="WinSerialPort Methods" Url="html/Methods_T_SerialPortTest_WinSerialPort.htm">
+        <HelpTOCNode Title="Close Method " Url="html/M_SerialPortTest_WinSerialPort_Close.htm" />
+        <HelpTOCNode Title="CloseHandle Method " Url="html/M_SerialPortTest_WinSerialPort_CloseHandle.htm" />
+        <HelpTOCNode Title="DiscardInBuffer Method " Url="html/M_SerialPortTest_WinSerialPort_DiscardInBuffer.htm" />
+        <HelpTOCNode Title="DiscardOutBuffer Method " Url="html/M_SerialPortTest_WinSerialPort_DiscardOutBuffer.htm" />
+        <HelpTOCNode Title="Dispose Method " Url="html/M_SerialPortTest_WinSerialPort_Dispose.htm" />
+        <HelpTOCNode Title="Open Method " Url="html/M_SerialPortTest_WinSerialPort_Open.htm" />
+        <HelpTOCNode Title="ReadByte Method " Url="html/M_SerialPortTest_WinSerialPort_ReadByte.htm" />
+        <HelpTOCNode Title="Write Method " Url="html/M_SerialPortTest_WinSerialPort_Write.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="dd657837-ee47-43d5-b9bd-cb8789603047" Title="WinSerialPort.DCB Structure" Url="html/T_SerialPortTest_WinSerialPort_DCB.htm">
+      <HelpTOCNode Id="887b7f6c-b2d6-421e-9e0d-39ec00e4b642" Title="DCB Properties" Url="html/Properties_T_SerialPortTest_WinSerialPort_DCB.htm">
+        <HelpTOCNode Title="AbortOnError Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_AbortOnError.htm" />
+        <HelpTOCNode Title="Binary Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_Binary.htm" />
+        <HelpTOCNode Title="CheckParity Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_CheckParity.htm" />
+        <HelpTOCNode Title="DsrSensitivity Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_DsrSensitivity.htm" />
+        <HelpTOCNode Title="DtrControl Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_DtrControl.htm" />
+        <HelpTOCNode Title="InX Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_InX.htm" />
+        <HelpTOCNode Title="Null Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_Null.htm" />
+        <HelpTOCNode Title="OutX Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_OutX.htm" />
+        <HelpTOCNode Title="OutxCtsFlow Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_OutxCtsFlow.htm" />
+        <HelpTOCNode Title="OutxDsrFlow Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_OutxDsrFlow.htm" />
+        <HelpTOCNode Title="ReplaceErrorChar Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_ReplaceErrorChar.htm" />
+        <HelpTOCNode Title="RtsControl Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_RtsControl.htm" />
+        <HelpTOCNode Title="TxContinueOnXoff Property " Url="html/P_SerialPortTest_WinSerialPort_DCB_TxContinueOnXoff.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="DCB Methods" Url="html/Methods_T_SerialPortTest_WinSerialPort_DCB.htm" />
+      <HelpTOCNode Id="9cf72184-abd4-430d-9df0-a80ac5b2f08e" Title="DCB Fields" Url="html/Fields_T_SerialPortTest_WinSerialPort_DCB.htm">
+        <HelpTOCNode Title="BaudRate Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_BaudRate.htm" />
+        <HelpTOCNode Title="ByteSize Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_ByteSize.htm" />
+        <HelpTOCNode Title="DCBLength Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_DCBLength.htm" />
+        <HelpTOCNode Title="EofChar Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_EofChar.htm" />
+        <HelpTOCNode Title="ErrorChar Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_ErrorChar.htm" />
+        <HelpTOCNode Title="EvtChar Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_EvtChar.htm" />
+        <HelpTOCNode Title="Parity Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_Parity.htm" />
+        <HelpTOCNode Title="StopBits Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_StopBits.htm" />
+        <HelpTOCNode Title="XoffChar Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XoffChar.htm" />
+        <HelpTOCNode Title="XoffLim Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XoffLim.htm" />
+        <HelpTOCNode Title="XonChar Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XonChar.htm" />
+        <HelpTOCNode Title="XonLim Field" Url="html/F_SerialPortTest_WinSerialPort_DCB_XonLim.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="WinSerialPort.DtrControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_DtrControl.htm" />
+    <HelpTOCNode Title="WinSerialPort.Purge Enumeration" Url="html/T_SerialPortTest_WinSerialPort_Purge.htm" />
+    <HelpTOCNode Title="WinSerialPort.RtsControl Enumeration" Url="html/T_SerialPortTest_WinSerialPort_RtsControl.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Title="Welcome to the Serial Port Test Documentation" Url="html/63ce297a-fa3e-4785-8aa6-676a056991cb.htm" />
+  <HelpTOCNode Id="8878465f-cba7-4dc5-89ba-02111deeed45" Title="Version History" Url="html/a18a5f30-058d-462a-be6b-2db5df893163.htm">
+    <HelpTOCNode Title="Version 1.0.0.0" Url="html/d467829c-7425-43bc-ad59-b911ee7ce2c1.htm" />
+  </HelpTOCNode>
+</HelpTOC>
